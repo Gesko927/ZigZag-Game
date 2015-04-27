@@ -1,8 +1,13 @@
-# Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
+**/bin/
+**/obj/
+*.suo
+*.user
+*.dbmdl
+**/TestResults/
 
 # Precompiled Headers
 *.gch

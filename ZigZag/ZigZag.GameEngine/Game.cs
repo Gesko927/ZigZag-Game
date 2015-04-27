@@ -15,7 +15,7 @@ namespace ZigZag.GameEngine
         #region Private Fields
 
         private GameStatus _status;
-        private Ball _ball;
+        private readonly Ball _ball;
 
         #endregion
 

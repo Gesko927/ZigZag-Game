@@ -33,7 +33,6 @@ namespace ZigZag.ConsoleUI
             Console.CursorVisible = false;
             _startDelay = _delay;
             _delay = 700;
-            //_game = new Game(Console.WindowWidth, Console.WindowHeight, 1, 1, new Point(Console.WindowWidth/2, 0));
             _game = new Game(Settings.MapWidth, Settings.MapHeight, Settings.RoadWidth, Settings.RoadHeight, Settings.StartPoint);
             _backgroundThread = new Thread(StartBackgroundThreadListener);
             OnButtonClickEvent += OnButtonClick;
@@ -76,7 +75,6 @@ namespace ZigZag.ConsoleUI
 
         private void MoveBallTimerOnElapsed(object sender, ElapsedEventArgs elapsedEventArgs)
         {
-            //lock (Console.Out)
             lock(_sync)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -228,43 +226,11 @@ namespace ZigZag.ConsoleUI
             if (_game.Status != GameStatus.InProgress)
                 throw new InvalidOperationException();
 
-            //lock (Console.Out)
             lock (_sync)
             {
                 for (; _mapPosition < (Console.WindowHeight - Console.WindowTop);)
                 {
                     RedrawMap();
-/*                    Console.CursorLeft = _game.GameMap.Map.ElementAt(_mapPosition).Point.X;
-                    Console.CursorTop = _game.GameMap.Map.ElementAt(_mapPosition).Point.Y;
-
-                    char fill = '#';
-                    if (_game.GameMap.GameObjects.ElementAtOrDefault(_diamondPosition) != null)
-                    {
-                        Point diamondPoint = _game.GameMap.GameObjects.ElementAt(_diamondPosition).CPoint;
-                        Point mapPoint = _game.GameMap.Map.ElementAt(_mapPosition).Point;
-                        if (diamondPoint.Equals(mapPoint))
-                        {
-                            if (_game.GameMap.GameObjects.ElementAt(_diamondPosition) is Diamond)
-                            {
-                                var diamond = (Diamond) _game.GameMap.GameObjects.ElementAt(_diamondPosition);
-                                if (diamond.DiamondType == GameBonus.Common)
-                                {
-                                    fill = 'C';
-                                }
-                                else if (diamond.DiamondType == GameBonus.Average)
-                                {
-                                    fill = 'A';
-                                }
-                                else
-                                {
-                                    fill = 'G';
-                                }
-                                _game.TotalScore += diamond.Score;
-                            }
-                            _diamondPosition++;
-                        }
-                    }
-                    Console.Write(fill);*/
                 }
             }
         }
@@ -273,7 +239,6 @@ namespace ZigZag.ConsoleUI
             if (_game.Status != GameStatus.InProgress)
                 throw new InvalidOperationException();
 
-            //lock (Console.Out)
             lock (_sync)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -302,7 +267,6 @@ namespace ZigZag.ConsoleUI
                             {
                                 fill = 'G';
                             }
-                            //_game.TotalScore += diamond.Score;
                         }
                         _diamondPosition++;
                     }

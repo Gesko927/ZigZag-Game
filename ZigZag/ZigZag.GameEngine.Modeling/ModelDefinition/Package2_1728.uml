@@ -1,0 +1,2533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="9b5d6a68-bb55-4006-b3c1-e4bb53f01e9a"
+  name="GameObjects"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="1c93453c-5de7-425b-87b3-ba0c66295ece"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DZigZag.GameEngine.GameObjects"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5915bdcb-cc24-406d-8967-fcb142f41ab3"
+        name="Ball"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="76cc5ac9-733b-4c5f-84bb-d57368fc904d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="dd2cdae3-ba6c-4359-a593-5dad8eea1d42"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06ab16d7-c48e-4c95-9b17-6f898f3516ee">
+                <propertyInstance
+                  Id="2330cb57-d1c6-4ec2-82dd-e6bdfeec8731"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7dcde39c-d34b-4fa2-851b-17bb785f1de1">
+                <propertyInstance
+                  Id="7d9f5413-abe2-401c-a3c9-a11f0223358a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fdb7acdd-c893-4fa0-aee1-c5f250772dc1">
+                <propertyInstance
+                  Id="2ee7d973-c9c1-44ee-90dd-ee540d124398"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e4816c66-6cfe-424b-a60c-1d4a9e3b21e4">
+                <propertyInstance
+                  Id="57f69216-4902-49ba-80a4-a690ee4f2da6"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5ce4e31f-f9f9-4605-a7e9-0ce0d6726d9e">
+                <propertyInstance
+                  Id="8a27a314-6270-45d9-8e52-cf66b717ffac"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="53a9d079-354c-4372-80c4-80f97225959e">
+            <interfaceMoniker
+              Id="f578962f-c1dc-47a0-a2ed-5bfad2399885"
+              LastKnownName="IMovable"
+              LastKnownLocation="Package2_1728.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="f03eb77b-46c1-4ea9-ab1e-ad12579f0660"
+            isSubstitutable="false">
+            <classMoniker
+              Id="ed8f54fa-05ed-474f-ba81-ef11231f5af9"
+              LastKnownName="BaseGameObject"
+              LastKnownLocation="Package2_1728.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="961cd0eb-b73f-4860-b4d1-2c8182510508"
+            isDerived="false"
+            sourceEndRoleName="Ball"
+            targetEndRoleName="Rotation"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="b595cc5f-4954-4fa1-9c16-82f67add4fc4"
+              LastKnownName="Rotation"
+              LastKnownLocation="Package1_1728.uml" />
+            <description>Property Rotation references type Rotation.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="630e003a-7e7e-40cb-9fb5-7431d44e6465"
+                  name="Ball"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0d615fb5-41bf-4d9f-a1af-5216bb4965d2"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d412a459-4d30-418e-a6ef-9442f558d16a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fe7c83d1-fdd0-4425-ba41-a5ee8d1f8bf0"
+                  name="Rotation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4f6f7a07-2f2a-4fe1-9fac-8a78243ab50c"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2335c952-05ee-4bba-8968-ec3f40b69c2a"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="ea1b554f-f159-4465-a131-3c90a8f3e55c"
+            name="Rotation"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="59b3e01c-c800-47a8-968c-757fe3b840d8"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3DRotation"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="70d69532-45ef-4092-bb58-53ad87e0f1d1"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c475b835-a310-41cb-83ab-b27d4cc886eb">
+                    <propertyInstance
+                      Id="f101f388-a465-4ee0-8877-fc9b84cba5c4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2c064978-853f-416c-921d-edf09b39112c">
+                    <propertyInstance
+                      Id="21e64e15-c357-4baf-aaeb-4f590df7240f"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd664e1c-cdb4-4448-b331-942b083d68cd">
+                    <propertyInstance
+                      Id="6a0e0634-4689-4289-aafd-e585f481ae7f"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f5a5b6f-db11-477f-a41f-1657ec91356a">
+                    <propertyInstance
+                      Id="f2b30c2e-ac4a-4bab-bca6-e6a4074d8464"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="575b6e17-bfd5-46e8-b394-75261ee8cd31">
+                    <propertyInstance
+                      Id="82d9a161-8220-4380-90a1-7d7d2e78ad0b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d42da68b-c94e-46f3-b6be-37b0e51fb271">
+                    <propertyInstance
+                      Id="9128be7e-39da-4850-9ef3-bfd9584c0e75"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f37cb1d2-c720-48fc-8d77-42ea0c451c49">
+                    <propertyInstance
+                      Id="c3572593-0b14-48f2-905e-43f4d491ba13"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="b595cc5f-4954-4fa1-9c16-82f67add4fc4"
+                LastKnownName="Rotation"
+                LastKnownLocation="Package1_1728.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="9ee7ef40-c9be-4890-b516-32c0ff7148f3"
+            name="Ball"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ae290de8-3fa5-419d-b909-8d3d8f0e33c1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine Type%3DPoint)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ab286916-e8da-47ed-884e-ce9a01d7b057"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ce13646-fa9a-492f-8233-5b646c54c986">
+                    <propertyInstance
+                      Id="2f6d9e4f-cf2d-4713-8d00-08b9d2de130f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cca24117-9641-4b5d-b76b-f728940e35a6">
+                    <propertyInstance
+                      Id="37e956eb-33fa-4fdd-b2d9-a2fc8ef25a35"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b299366-b505-48d4-8c34-0fc4f677ea46">
+                    <propertyInstance
+                      Id="fcf40d32-266e-4859-9052-325722a8c7a2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56799809-3484-45fe-9654-50fececa8466">
+                    <propertyInstance
+                      Id="c455eaaf-1ecf-402a-9980-a6aa2dbe7c32"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0123ff98-4f91-48fd-beb8-17a9eab848cf">
+                    <propertyInstance
+                      Id="8fcb9353-b5a7-4078-a49a-acd811a1c202"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="313e9323-440d-4be0-bbbe-d0fe06817784">
+                    <propertyInstance
+                      Id="d882fd65-d6d5-4885-91f2-bde0513f2d56"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2500ffb6-825f-4c2b-871f-b7ae09e3b471"
+                  name="point"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f6ce1159-2103-4b5c-86fd-e7b2b3daf82b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine Type%3DPoint)]) ParameterIdentifier%3Dpoint"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a88631cf-cc1b-4667-bbe3-67fd4ec72cf0"
+                      LastKnownName="Point"
+                      LastKnownLocation="Package1_1728.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a28cb0e4-5164-4030-befa-949eb47985d6"
+            name="Ball"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3a6ecdea-5aa6-4c23-8f32-b54d5052935a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c365066e-5a2d-4844-a565-9b3498f4cf25"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="10edb44c-b5db-417d-8aa7-09e42f9161fd">
+                    <propertyInstance
+                      Id="97cd1090-5c38-4038-a292-ab58d46bb270"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11dde8b7-1fb0-431c-b490-12a647304a92">
+                    <propertyInstance
+                      Id="cbb208c6-301f-46c6-aa91-e65eb6171668"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8516a31b-3180-40df-9af7-723d0366079b">
+                    <propertyInstance
+                      Id="21cee7b6-3866-4ade-957c-3b89dc95beaa"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6588f3f8-0ab0-4b5e-bc33-4e5cf985f620">
+                    <propertyInstance
+                      Id="11ae9dba-7846-4084-b780-87805854f9cd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5714f173-dd19-4f32-ac17-9ee1a3522c82">
+                    <propertyInstance
+                      Id="a65e0025-c657-42c5-85cd-5318f8402cff"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="279b958a-3bb0-4028-8570-ec5e77357b62">
+                    <propertyInstance
+                      Id="f1a80bec-b042-4bd5-9468-e7e2bf0da8e9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="945c83db-faff-497d-a764-10eebb5542ca"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ac82e798-9c6b-499d-9d49-41ceec661083"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7edc92b0-5a04-464d-a287-37be565c2ff1"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7a318639-eaef-4295-99d7-50ca3ec33e60"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="21e1a3e6-ee00-4b40-9483-1f00d40c9cd7"
+            name="CanBeMoveAt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="25704114-2cc7-4527-8fad-f41d7a972b3f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3D(Name%3DCanBeMoveAt OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1d715b32-a80a-40fd-869b-ecb5da423e8e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="deb00cd7-5029-4678-83ff-8b29116b2d65">
+                    <propertyInstance
+                      Id="27c172e1-9464-4a08-a480-56a3d2b53fb4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5a34a95a-7870-4e1b-8267-e88f75bd2446">
+                    <propertyInstance
+                      Id="3836fa02-d022-4a96-b8cc-fb700cc54944"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d511b3bd-9668-43ea-9db2-93e2f0933053">
+                    <propertyInstance
+                      Id="2f522be6-a54c-4ce5-88f9-cbf6ff5578e9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2170a911-0211-4699-94f8-d42a19f3559b">
+                    <propertyInstance
+                      Id="960c688b-1aa0-4733-bb6c-f651d5608941"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5055782-8ab5-4b59-935e-940d61384ea8">
+                    <propertyInstance
+                      Id="713d40c4-9dd7-4a1a-b2c4-e5c4d6f9a861"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="385eb448-ee8a-4c33-b6e7-7f6814ef65bb">
+                    <propertyInstance
+                      Id="a2d0ee0f-4f0d-4a8c-9e50-3c7356002dac"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c5aacb9b-061c-49c0-ba85-706815dc93aa"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2511654f-c40e-4d44-851e-50f8423c4cd5"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7e1671f5-40bf-4079-a879-c27d8625ddea"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3D(Name%3DCanBeMoveAt OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="893cd734-4bcd-40fb-8ee1-b38b9206ebf7"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c901d488-505f-4aea-92df-cb4be85de02a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3D(Name%3DCanBeMoveAt OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f1ed808a-4faf-4f6a-b4d5-b37b0d607b78"
+            name="MoveAt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2ae79473-015b-4c31-b92f-c2b583c29752"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3D(Name%3DMoveAt OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7e7e84f1-633b-45dd-9ed6-c192d7424c45"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90c1eabc-9128-4021-b6d4-88b26bbd0bce">
+                    <propertyInstance
+                      Id="9a14de3b-46c4-4206-bef5-85f39d80a4df"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee978964-534e-48f6-acbf-99b1868351de">
+                    <propertyInstance
+                      Id="104c81ca-3aa1-453d-8b45-cba24b287a2f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e8fbe00-6741-4add-a50d-d9d1e20041f6">
+                    <propertyInstance
+                      Id="eaa17de0-9a56-4e36-a228-b4049ebe590f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07cfc856-d2e2-43e1-b1ed-d46d1e9b513f">
+                    <propertyInstance
+                      Id="7b3af773-b1fa-43c5-b5f2-6009b609052d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21edc2de-34cb-4860-8a11-2ec03336f84b">
+                    <propertyInstance
+                      Id="d4c56cc4-0bf6-4f87-b6b3-88015866e5d8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="70413982-6156-409a-b2ed-71b6ac076be6">
+                    <propertyInstance
+                      Id="50b85aee-f95b-43bc-aff5-ead99f721732"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fbf7d921-b6c6-46ff-a469-8aaef5e75ef2"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6e62410e-383e-4cb0-a1a8-abc22b78719f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3D(Name%3DMoveAt OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e133ce63-3edf-4e8c-aa6c-374a1fbbf49e"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b5a09b4e-8f3e-421c-8e0d-970d2b906371"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBall Member%3D(Name%3DMoveAt OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f578962f-c1dc-47a0-a2ed-5bfad2399885"
+        name="IMovable"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="6ae40949-d5b2-4f15-8dd0-4e5be064c2e9"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DIMovable"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9bd36c56-c511-44ef-8838-136d3b485017"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c03d42d6-d9cc-4b93-a345-d7f776766fcf">
+                <propertyInstance
+                  Id="6ef73bba-28cd-4f17-aab1-0715c15bdeea"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="821aae11-92ad-452b-9229-2956df97d1e4">
+                <propertyInstance
+                  Id="214f7305-5bd0-4faa-84cf-6429131fc01c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b77b614b-c264-4912-9839-0846fb770dba">
+                <propertyInstance
+                  Id="fb5fe78e-ac14-4dd6-b6a1-0821f3596b93"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="df252999-b314-4898-b4ff-6338b5c89d0a">
+                <propertyInstance
+                  Id="d0892651-5caf-405d-a705-8e313f6399d0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="ca1cb344-5bb8-42b7-a69a-0847768ce7c2"
+            name="MoveAt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="962cb5af-bf4a-4d45-b9c2-4d873fc91500"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DIMovable Member%3D(Name%3DMoveAt OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c7d0b1f3-ebff-4404-a62c-ddf19feae088"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="daa464af-8fa7-4ea1-94a2-2e5469d6bafb">
+                    <propertyInstance
+                      Id="2f52eaef-081a-4abc-9ee7-b8b4744a0939"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01f116bc-862d-4603-85d9-744d0af72fcf">
+                    <propertyInstance
+                      Id="94dcdda9-0791-456a-b289-35afcd5b730b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d02ac3ce-cee3-4ee4-a403-0d06ebcbc324">
+                    <propertyInstance
+                      Id="ddc28c1e-596d-4340-9b4b-175a088ded95"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4979ddc4-8b05-4203-a45a-a7179c99ee9e">
+                    <propertyInstance
+                      Id="e0b05e7e-0bca-4b48-b222-89c60dfeee7a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ff30783-2ae0-4b34-8170-45c726e4cf58">
+                    <propertyInstance
+                      Id="c502ffb2-8176-4a01-b5ef-51a0545d8de8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be72b66f-f63a-435e-85a6-985ef5feb340">
+                    <propertyInstance
+                      Id="5a34688e-7817-4aff-a75b-9c238502656a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ec1f9a3b-3f9e-471f-bb68-284de1c46a4d"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="01e16989-3d20-4375-9155-98776d08da0c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DIMovable Member%3D(Name%3DMoveAt OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a96f211c-0412-42f5-b6dc-faeb00f192fd"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8ee4001e-5aef-4801-9fd4-76904cadcded"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DIMovable Member%3D(Name%3DMoveAt OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ed8f54fa-05ed-474f-ba81-ef11231f5af9"
+        name="BaseGameObject"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0bacd0b8-24f1-4a45-a8d0-376150997853"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBaseGameObject"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="04d0525b-f929-4ad7-b43d-c88376b3c756"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5f501301-6cf7-4fbc-829b-7ad28d53f5da">
+                <propertyInstance
+                  Id="7868625e-3434-4138-8c6c-5fdbd8324a72"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0b569fcc-aa34-4a12-a9a9-fb8d00045393">
+                <propertyInstance
+                  Id="8b8cb7fb-1d57-4dff-bd30-11c1813269b7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0479bebb-2943-4bbd-9b1d-f284efcb1e18">
+                <propertyInstance
+                  Id="fb427f31-4018-4a2f-9dba-3fb05089e420"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="71694025-2620-4f33-94b8-146874f61f1a">
+                <propertyInstance
+                  Id="9de9d6e7-1866-4fa9-b2ee-7454a90e5484"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="32200afb-621e-48a3-b5be-4cdb7eb33fb5">
+                <propertyInstance
+                  Id="e194eccb-8d24-4e31-be92-87733eb4de2a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="0ff5c9dd-0ca1-4db7-8cc9-a72a9ba2bb39">
+            <interfaceMoniker
+              Id="45f482bc-6fdb-4bbc-be7d-414d83e4a97d"
+              LastKnownName="IGameObject"
+              LastKnownLocation="Package2_1728.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="2f1d0ec5-0bb7-4b63-9d2d-5165db000aa2"
+            name="CPoint"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="cfb517ee-a603-4fe7-b20b-85d990b5d555"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBaseGameObject Member%3DCPoint"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="762f60b4-7acd-4e0f-9a4a-da101877ab92"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3953564e-8de7-44e6-92d3-58d9627e3aae">
+                    <propertyInstance
+                      Id="9083724f-f2d9-4fa5-ad07-2b0718244ddf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7dd80217-3f1d-49be-a940-ef3d3b531f8d">
+                    <propertyInstance
+                      Id="4cfcf056-2d5c-475a-b1c6-f3fce7a0269b"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aac3489b-6351-4052-ae79-227228c35371">
+                    <propertyInstance
+                      Id="df7fd25c-c056-4049-8c29-31090d0918ed"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6b5108e-f6b3-4512-99e2-e0d1fb20cc11">
+                    <propertyInstance
+                      Id="df6714d6-6f5c-45a1-aa46-95c7e12fedae"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f23e6a0-6c90-4d9c-9232-045163e66866">
+                    <propertyInstance
+                      Id="00679bf3-5cb5-4ac6-a960-be715dcadfb3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b48fa05-dca3-4f73-b8f2-dda0e6636b6f">
+                    <propertyInstance
+                      Id="4124fca4-c7e2-49ec-b0d1-7de8cb1440de"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c00d0a33-fe62-4986-b97b-d2eb3d7d5145">
+                    <propertyInstance
+                      Id="42b7fc1e-3149-48a7-8dae-50abad3deb48"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="a88631cf-cc1b-4667-bbe3-67fd4ec72cf0"
+                LastKnownName="Point"
+                LastKnownLocation="Package1_1728.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c33ec0f4-eba2-413c-a991-b2ca7a59656b"
+            name="Map"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="300e585a-ffc7-4c43-9759-39654495b891"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBaseGameObject Member%3DMap"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f08e4d86-69df-4fa3-9eb9-dd8b0a7d432e"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0df67924-a9ac-4957-b886-25fb046316a8">
+                    <propertyInstance
+                      Id="2fd10db9-a440-4682-ac6e-36f7529eaefe"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e05c782-fc67-417f-88cd-ffb4e04d1066">
+                    <propertyInstance
+                      Id="0b38f920-7451-4453-ba67-c007628dbbbf"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e83790b-b661-4309-8943-07c02cd909db">
+                    <propertyInstance
+                      Id="87d4ef56-fe2f-4866-8c89-7fc0dad79d49"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0d0cc6e-9aac-4c4f-b4a9-19b6250b38d0">
+                    <propertyInstance
+                      Id="a3fbd7f6-0a4b-43d3-97f3-969d64292a00"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4002dde0-baf6-4326-97ea-f72c50dc9af3">
+                    <propertyInstance
+                      Id="c71ce63c-d419-4d3c-b323-43ad9269c60b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48e71ac8-da87-4887-9af2-89eaf009162d">
+                    <propertyInstance
+                      Id="327733e6-198b-4a6b-baf3-3752e9266222"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0454d8d6-c724-4b4f-bebe-6842832a90fb">
+                    <propertyInstance
+                      Id="a4fbdcc3-70d2-40f8-a826-7ddcc8d0ed20"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="6df903c2-7693-4704-b6a4-89b7d6e4571b"
+                LastKnownName="GameMap"
+                LastKnownLocation="Package1_1728.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="96fe46bf-be04-4426-afdb-d722028fbbe7"
+            name="_cPoint"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1becef52-3aab-4759-b412-bb02f159dc7c"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBaseGameObject Member%3D_cPoint"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="077d51d3-0d6a-4abf-bd19-f4a48cb2dc5e"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ceb4c8bc-34a8-4452-bfe7-6b2099de1f67">
+                    <propertyInstance
+                      Id="e308ae03-df47-41a4-ab73-5850305e47a7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86a913de-3a25-4f80-b058-009f0ecdbbb0">
+                    <propertyInstance
+                      Id="863b0ab6-8146-4390-bad3-cad61df1be85"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09a9cfd9-1a14-486a-b236-d96fa506e8a9">
+                    <propertyInstance
+                      Id="edb5cb86-806d-41ab-ad4c-c72c699ff664"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af07594b-859f-45f4-959a-f0ae2a8be672">
+                    <propertyInstance
+                      Id="822acf66-1803-4777-9b16-6c5f87b5818b"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="819ce5ff-f3ca-4f9d-ae7c-45020caf0858">
+                    <propertyInstance
+                      Id="08a4e940-7089-4161-b12a-0091abe556ee"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="a88631cf-cc1b-4667-bbe3-67fd4ec72cf0"
+                LastKnownName="Point"
+                LastKnownLocation="Package1_1728.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b55051bf-3899-4fc8-9eac-ee5f780dd464"
+            name="BaseGameObject"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d257ca71-07b7-4991-a51e-7e9a4f6de8b9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBaseGameObject Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine Type%3DPoint)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9a1d1fcc-65da-4528-a89e-6cde814d5592"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8015d579-6f9a-4d00-8afd-974c3c77c8e7">
+                    <propertyInstance
+                      Id="fa698464-1d28-4023-adfb-4a261d777fd5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c63f9b6-332b-425e-9bb9-836316ef55de">
+                    <propertyInstance
+                      Id="2937963c-f13a-4916-a430-1657dadae15a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6817ba08-462b-412d-b9b2-27f2f200fc22">
+                    <propertyInstance
+                      Id="0865bbe4-5f51-4922-aea2-31367f729d2c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1961e2fa-88ad-4667-a654-1841a90e0e4a">
+                    <propertyInstance
+                      Id="6514e4d6-222e-48e7-9320-d23730bbdd08"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f63a1bb2-e7ef-408b-832c-54e587c65579">
+                    <propertyInstance
+                      Id="68d90306-1ca8-4b9f-b391-a41e8a8f59d5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e4d0adf-6ed3-4d2c-acb5-799efa23e607">
+                    <propertyInstance
+                      Id="33173b0c-2f4c-410b-bdbf-8d06c2e4b972"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a9e16dbf-9085-4d55-983e-f860623bd48b"
+                  name="point"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b3ed6909-e97e-47cb-97d0-8cb148f1dc46"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBaseGameObject Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine Type%3DPoint)]) ParameterIdentifier%3Dpoint"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a88631cf-cc1b-4667-bbe3-67fd4ec72cf0"
+                      LastKnownName="Point"
+                      LastKnownLocation="Package1_1728.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3ea28319-f1a4-4152-96db-5addd6cd5236"
+            name="BaseGameObject"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2c31a4b2-72eb-4a1e-b057-d99d801efa9d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBaseGameObject Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="363d7bc0-a2dd-404a-ad9a-d8a555ee9298"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9845d47-7a8e-4865-a4ce-5ea3c00ee740">
+                    <propertyInstance
+                      Id="05ef9539-b129-46d3-9243-f3340f32841d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="520b169f-3aaa-4b19-b855-1e9e6e631890">
+                    <propertyInstance
+                      Id="5aeadfad-fa14-453b-b30f-dc7bae984817"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="571c578c-6bac-4ca2-8f14-dd6fe7b2983a">
+                    <propertyInstance
+                      Id="c2f4711d-4e01-4b93-b7db-f5f13d6e1490"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="657459d8-5ad0-49ff-be2a-2e3571657242">
+                    <propertyInstance
+                      Id="2db62a3c-7b4f-430e-b6a9-f8759fa31d59"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="096f2794-34a9-4490-8a1a-6a9fab0931e5">
+                    <propertyInstance
+                      Id="72a17f83-5efc-4c1c-82e5-8c405e050d9b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0054283e-b042-4c03-8f18-2e9bf77b1301">
+                    <propertyInstance
+                      Id="f341c718-61bc-43b1-984c-113eba83267a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="49cbb00e-5b5d-4d5d-b764-85f6c6e09a74"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="64d475cd-c806-4834-bda7-803f0baeede1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBaseGameObject Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f0df6513-bc7f-4312-a8f3-0a769684acf3"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="afae4df6-4326-433c-b61b-e84ea341e570"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DBaseGameObject Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="45f482bc-6fdb-4bbc-be7d-414d83e4a97d"
+        name="IGameObject"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="fa9d3635-3ead-4784-9a3a-c5c6f6b3f133"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DIGameObject"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="fcb4119b-a892-4d7f-918e-4630098f0615"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0eb0deeb-4b3f-40d9-ba23-bec0131472f1">
+                <propertyInstance
+                  Id="d7a1d262-9ea8-429f-8985-50927446fd43"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2bc74cac-716c-4045-abed-f89ae4a22a07">
+                <propertyInstance
+                  Id="7b42aaf0-4987-467c-a969-b9481909ec55"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="77b293c4-4b5c-47a4-800b-fbe333458ef3">
+                <propertyInstance
+                  Id="d618f89b-93ee-4806-b77d-d0acffbc437e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="26fb12fd-7a3b-46a8-917f-8e3e3df704ee">
+                <propertyInstance
+                  Id="aaf453fc-c27f-422c-87a2-796b0e764911"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="4c2787c8-2321-4211-8e21-c213444e634c"
+            isDerived="false"
+            sourceEndRoleName="IGameObject"
+            targetEndRoleName="CPoint"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a88631cf-cc1b-4667-bbe3-67fd4ec72cf0"
+              LastKnownName="Point"
+              LastKnownLocation="Package1_1728.uml" />
+            <description>Property CPoint references type Point.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b3262016-fc38-4d8c-a9ff-9764e00c559f"
+                  name="IGameObject"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f1bfe4ee-7600-44b5-b76f-cb09e3903ae5"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="96182afd-973d-4303-86e2-b576319688ca"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d0e29e59-4a10-4951-ba8e-61d0aab2c204"
+                  name="CPoint"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="eea89b61-7a12-402f-8af9-7a82a97515a9"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f514113b-fbd9-4b13-92b3-8c76e378f28a"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6f76e784-9037-4c85-ba1e-6684429b68bd"
+            isDerived="false"
+            sourceEndRoleName="IGameObject"
+            targetEndRoleName="GameMap"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="6df903c2-7693-4704-b6a4-89b7d6e4571b"
+              LastKnownName="GameMap"
+              LastKnownLocation="Package1_1728.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0d54004c-b6ee-4753-9e1c-f8f8d064c9d9"
+                  name="IGameObject"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="657ec428-0314-4d70-a6d7-c4e0c4acff76"
+                  name="GameMap"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributes>
+          <property
+            Id="0ac0d11f-e1c5-413e-94a0-de411dd4db0a"
+            name="CPoint"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4145072f-7457-4177-a7f0-43fd25fcd492"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DIGameObject Member%3DCPoint"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="964e4ddd-e7af-41e2-847c-aebfdb680b80"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c076ade-4ed0-4623-8165-95c570109ec2">
+                    <propertyInstance
+                      Id="76bc9ced-7722-4899-bdb1-f07aa9e0878c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89f189cc-10f4-4dd8-99d9-1a5839503eb3">
+                    <propertyInstance
+                      Id="1ef91ddc-5501-4436-904a-e06a7a04e213"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7d8b460-7c42-4f0f-9e56-5c73c994d1cb">
+                    <propertyInstance
+                      Id="4a09e4e1-7387-44c7-85eb-aa88e8bdac09"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bab9fbad-bc76-485c-ab8a-99234ebf7e43">
+                    <propertyInstance
+                      Id="455473cd-fc31-43f8-a0aa-620a20f151c8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a394d0c1-cf5b-4c50-8d2a-b3517bd45a5d">
+                    <propertyInstance
+                      Id="6062014a-4017-4cd6-a38a-c4b7658d6060"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54a5427c-3f2e-481b-b3ac-e4b139256441">
+                    <propertyInstance
+                      Id="4a20a1ab-cc41-43cd-9f2c-d1aebbe6e1ca"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd1f067b-9395-4ea8-9e03-19b491cf27c9">
+                    <propertyInstance
+                      Id="1f5b60f9-7ea0-4c96-b2c0-982a3369127d"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="a88631cf-cc1b-4667-bbe3-67fd4ec72cf0"
+                LastKnownName="Point"
+                LastKnownLocation="Package1_1728.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6725dd4c-0089-4b52-a1e8-097a7ebf9ef2"
+            name="Map"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5f08b64a-feef-4cef-b3a9-9ffd91093610"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DIGameObject Member%3DMap"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6334228c-0b8b-4079-82dc-431a0c12a152"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95daeb36-4b71-425e-aa49-d6ed732e121b">
+                    <propertyInstance
+                      Id="60667d0e-08a9-4f81-b44d-e3375608a91b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85ed50dc-05a3-41fb-acde-f9f7692e5d7b">
+                    <propertyInstance
+                      Id="d609cf66-2d56-4485-87d7-2cbce11b590b"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7e9b038-0793-4eea-b0f2-77b0a8e42036">
+                    <propertyInstance
+                      Id="aee8bee7-a084-4ac7-bb17-ff578af8c8b7"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4cca78da-f196-4fe1-badb-8f5c91809a6b">
+                    <propertyInstance
+                      Id="adc3af15-efb0-42dd-8d1d-5f0b89c8b16a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dca19c81-31cc-4aa4-b8bf-745883395417">
+                    <propertyInstance
+                      Id="688e0c14-0fda-4f21-bea2-f64796b32b7b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d244152e-685a-4f02-aa72-fef5e9474dd2">
+                    <propertyInstance
+                      Id="b64bc6ea-cc0a-4870-b446-7b586db5630b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a23f8da6-f39f-4f14-b008-2e25f4b42934">
+                    <propertyInstance
+                      Id="ce183656-3711-490b-91fb-c08a1783526b"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="6df903c2-7693-4704-b6a4-89b7d6e4571b"
+                LastKnownName="GameMap"
+                LastKnownLocation="Package1_1728.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="18316eeb-11e8-493c-b604-b784d2af657b"
+        name="Diamond"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c5729818-0dfd-402a-9e91-fb71785e4249"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="61dbfda4-b6b0-4533-80ba-ee65d87c481c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="75ac8d9e-8f92-47fd-a0c8-1169bd88a976">
+                <propertyInstance
+                  Id="36cdc842-35eb-410e-bb50-5e14796d098b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0ef0f52d-32fb-453d-9917-28a677d41129">
+                <propertyInstance
+                  Id="1d8643f5-636b-421e-8d35-6fdf2e2e3afd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a65a413c-418c-4b0d-81d2-ca0258e5a483">
+                <propertyInstance
+                  Id="7eb98eb4-c536-41fd-a7dc-a3471c82194a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="373cc32a-1a2a-48cc-9fac-d491ba89d235">
+                <propertyInstance
+                  Id="39b6a900-7901-4fd1-8916-f4d8abb46dec"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7266abdb-fcb0-4a8a-8630-12f0daa17779">
+                <propertyInstance
+                  Id="beb35915-1ef0-40b7-a5e4-6ce987cf08d5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="91dc6c5c-028c-4a9c-b0d8-a43b40362b1e">
+            <interfaceMoniker
+              Id="c4fb9078-f181-42e9-8707-13c57a653e78"
+              LastKnownName="IBonus"
+              LastKnownLocation="Package2_1728.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="74daff3d-aa84-4609-a430-e8ba845b63c3"
+            isSubstitutable="false">
+            <classMoniker
+              Id="ed8f54fa-05ed-474f-ba81-ef11231f5af9"
+              LastKnownName="BaseGameObject"
+              LastKnownLocation="Package2_1728.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="14b4a8ff-2b7e-41bd-9fa0-66ad1fa55863"
+            name="DiamondType"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a8af504e-b9cd-437e-ac47-736959105ad5"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond Member%3DDiamondType"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="61d38ff2-c2ea-4606-a445-40f054eb2989"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0710d0b2-717f-4da5-9828-f45be0fd2d8a">
+                    <propertyInstance
+                      Id="55940e14-5515-4dd0-b3d2-28e1f9f26d5f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58f87136-5afc-4bf1-b8a1-1f619ce0ce82">
+                    <propertyInstance
+                      Id="1acf5152-7ee8-4cef-88f7-6b8769fc396c"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4030dc6a-ed1f-4ab0-95b0-10cb8cae15e6">
+                    <propertyInstance
+                      Id="e190a90e-2c2a-4d2c-8ea0-932fc2867e5e"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43fc99fa-2274-4898-8c9a-d293500b19bc">
+                    <propertyInstance
+                      Id="fbf19075-e278-48f5-9f13-e4824b7a5222"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a96328d-7779-4852-9031-28744fdb5a22">
+                    <propertyInstance
+                      Id="e07867bb-82d3-4cc3-add6-7f526086add7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d230e7f-e08c-4aa3-8043-9b4ef5b255cb">
+                    <propertyInstance
+                      Id="2ca3471a-1e18-47b6-8514-9361b5a3107e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3261131-fdbf-4ce9-bbe5-d2d2aafabdad">
+                    <propertyInstance
+                      Id="2ea380ae-eff8-4a21-ac59-0ca507c0e96b"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="367beea9-7c8c-40fd-a7ac-872401a9ada0"
+                LastKnownName="GameBonus"
+                LastKnownLocation="Package2_1728.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="407f9a5a-b7b6-4a62-98eb-bfd9e9f4ea97"
+            name="Score"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0e2c556a-c87d-4a64-bb5e-9a1b7dc6bd37"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond Member%3DScore"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3051a181-2816-4708-8028-e784f32cf6c6"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69a17bf4-1a2c-48b6-8c94-15bd10062ea0">
+                    <propertyInstance
+                      Id="e98e0a24-fc98-40a2-af8d-f4f6fdcebbbd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e23c5d21-02c1-439b-8ea4-9be9f98fa307">
+                    <propertyInstance
+                      Id="d9c9c232-20d9-49b1-9456-dc30637b9cd5"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dbbf1436-454b-45f4-959b-54a022694c44">
+                    <propertyInstance
+                      Id="1a3ab215-e5d6-428b-9a74-be1ff2857471"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="abda5f39-d863-42b9-be63-a826d9268d86">
+                    <propertyInstance
+                      Id="c5ea2f34-788a-4034-955f-573dd3e81a2e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b1576e3-815a-4e40-a9b8-922727a88bc7">
+                    <propertyInstance
+                      Id="b073c203-9b47-4295-950b-777c8f9fe402"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2fb1eff-bf95-46f5-a786-7eb09bb0d13a">
+                    <propertyInstance
+                      Id="a0369dd3-7ed0-41aa-8740-723784a3e424"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="879a8f41-f0cd-4bc2-8e9d-a492983cb6e0">
+                    <propertyInstance
+                      Id="04bf8c59-2bf1-4966-b0f6-c63a84c5424e"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="121c5e7f-b7b0-4d5c-968a-82af1e0c66b5"
+            name="Diamond"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4f2d4888-f518-41fa-bafb-9536f71254a6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine Type%3DPoint)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4f6037f5-7669-46c6-bb50-dce23d3c6a42"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a70217f6-411f-4197-8da3-111284a39004">
+                    <propertyInstance
+                      Id="4aba4969-099a-49a2-9d7d-cfb1f940f6ba"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba36f353-6757-4805-8069-c5305ac666a3">
+                    <propertyInstance
+                      Id="65197f7d-e1d7-4203-bbfb-d6e744631521"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3241412-8352-442b-93fa-39800fb1fad6">
+                    <propertyInstance
+                      Id="d518de2e-7492-4315-96ab-6947fea8dce0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51b0998a-f552-4790-8120-31c8db5305ac">
+                    <propertyInstance
+                      Id="80aea0ce-0038-42c0-993c-6bd4f92b116d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff2375e8-8927-4248-9b3a-0a716399f955">
+                    <propertyInstance
+                      Id="9652d55b-84c9-403c-bb4a-54407f7be060"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0e34369a-b7fc-4fa2-a20b-3f4cc00d1ea3">
+                    <propertyInstance
+                      Id="5a53ad4d-57b0-412f-8fa5-6ad258ee3e45"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="048ba89a-7a0b-45c4-b065-01f87c12487b"
+                  name="diamondType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6185eeae-5204-4075-a027-1b20c1b1354c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine Type%3DPoint)]) ParameterIdentifier%3DdiamondType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="367beea9-7c8c-40fd-a7ac-872401a9ada0"
+                      LastKnownName="GameBonus"
+                      LastKnownLocation="Package2_1728.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f21f33cb-294e-4ef8-a1a5-e2b2f7361cfe"
+                  name="point"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="30793629-099c-4302-8959-110a056e63be"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine Type%3DPoint)]) ParameterIdentifier%3Dpoint"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a88631cf-cc1b-4667-bbe3-67fd4ec72cf0"
+                      LastKnownName="Point"
+                      LastKnownLocation="Package1_1728.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2304bb22-bc15-451a-a6cd-f5ba8fdbe355"
+            name="Diamond"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3ff319d1-ba3a-47f6-a816-54fa698f38d4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b4d85bc5-cc8b-49bb-9198-ed48abd4d57b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d0733b12-3176-4ce3-8a05-f9e4d8883a97">
+                    <propertyInstance
+                      Id="175495df-38a3-46ac-831f-78559f362ad6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94d29e44-a6f0-465a-b88b-2d53965390f7">
+                    <propertyInstance
+                      Id="487f413c-fd46-4218-9dba-2a2736f68262"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea1f10a4-deb7-4039-9130-e0ff3a72ab58">
+                    <propertyInstance
+                      Id="a7d6f6d8-7774-49ea-9776-fdfe87faa34f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e9ac21d5-6a50-407b-883a-a42fc47f5284">
+                    <propertyInstance
+                      Id="fd9adf3b-bf56-441a-8b46-25fc5a82eaf9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5a944683-b452-42fc-8926-3ec389855a5d">
+                    <propertyInstance
+                      Id="24c0560b-5356-410e-9511-086c658e165d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76b8108f-df39-4f4f-9862-6f8efa4d2fe0">
+                    <propertyInstance
+                      Id="c12cfe7c-edfc-4ed1-8cab-df4f4d091f4e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7765d506-9138-4ee8-873f-ade760fb593b"
+                  name="diamondType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="082b98fa-c4e8-43fc-b0e0-24e7b7286a87"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DdiamondType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="367beea9-7c8c-40fd-a7ac-872401a9ada0"
+                      LastKnownName="GameBonus"
+                      LastKnownLocation="Package2_1728.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fc95fda5-52ec-43b5-87f5-0bddaf09ef76"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ef32012e-fd8a-46d3-8e8c-63b7ed94cbd2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dcd37422-9d46-41a9-b5c2-95736f110ba6"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="074e18dc-73e4-4cd0-ba3e-9b86e4cf9f23"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5a56a8cd-a7e4-4bc7-a5c3-34aeb66c5812"
+            name="Diamond"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5c56aa2d-8c0e-4513-9555-1ce66be4aad1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="437b5744-733e-441d-9b79-35089755487d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0f9ee28-40a6-4e3d-a8fb-a355440ea5b6">
+                    <propertyInstance
+                      Id="ae67a359-210b-46db-b6a3-20785a36731d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cbe17eda-60e6-41eb-b42f-12f82176c46a">
+                    <propertyInstance
+                      Id="b1991ee8-39a2-438c-9f50-9796db1af815"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a798a26c-3fa3-4ad2-a7fc-8effe0524344">
+                    <propertyInstance
+                      Id="ac4adc8d-558b-46f3-b49b-af0b00d193b4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f18755bb-a8ff-4c84-bb91-535082151dd7">
+                    <propertyInstance
+                      Id="1d5f93bd-8b51-49b2-b578-12a885f42171"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25c995c6-5f65-480e-93b2-237021c1ce40">
+                    <propertyInstance
+                      Id="e1f9e32f-df63-4d46-a791-6ebb65c7344e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1ecba81-72c6-40b2-8655-6a6c2d55b992">
+                    <propertyInstance
+                      Id="6d45c3fa-a84b-4798-8114-7f85de076209"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6f1df2b8-545b-4074-aaa5-1a898d24e58f"
+                  name="diamondType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d71f896a-409e-42e3-ad90-f049bff87ba3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DDiamond Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus)]) ParameterIdentifier%3DdiamondType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="367beea9-7c8c-40fd-a7ac-872401a9ada0"
+                      LastKnownName="GameBonus"
+                      LastKnownLocation="Package2_1728.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="367beea9-7c8c-40fd-a7ac-872401a9ada0"
+        name="GameBonus"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="0ce7da2c-afa8-468a-98c3-d48b4e4ebefb"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="159099de-ec09-482a-a716-3d67487820c3"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="de4dbf22-ae55-483e-9c75-ec14ca6f9b01">
+                <propertyInstance
+                  Id="a5491670-805f-4980-816e-f754feec0ecb"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="93591ea5-8c68-4b43-9d7b-ee65025df42b">
+                <propertyInstance
+                  Id="05aa4217-a8c2-4fe8-9002-a7c208ff54e7"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="921beff3-3d46-4122-9e41-904086afad43">
+                <propertyInstance
+                  Id="f6ff8d5e-6a4e-43a8-b054-0a18ab55d48b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="19f9c349-838b-4c2d-9a01-4f0b5a5c40d9"
+            name="Average">
+            <referencesInternal>
+              <reference
+                Id="b46aca3e-e880-4cb8-b3ea-fac14cf12227"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus Member%3DAverage"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="bedaa3bb-8fe0-4ebe-a74c-1755da1f525c"
+            name="Common">
+            <referencesInternal>
+              <reference
+                Id="f5ed6182-3e7d-4fe2-9d1c-6f878d0b51ee"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus Member%3DCommon"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="368fb64e-c2bc-4740-b9a4-3f90a9607c19"
+            name="Great">
+            <referencesInternal>
+              <reference
+                Id="ee2462aa-0b34-4112-bc62-6e8b71ac19a2"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DGameBonus Member%3DGreat"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="c4fb9078-f181-42e9-8707-13c57a653e78"
+        name="IBonus"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="f11935b1-4bf3-4bfc-9c25-18b557f6c068"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DIBonus"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1300f711-caf8-4d33-ad06-f65002493773"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6be9625c-32da-44b9-95d2-4af3e995f46a">
+                <propertyInstance
+                  Id="d5572868-b887-4f1d-865e-96e370dc8600"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="df4e2e94-112d-4ba3-9809-fbf8d58cec12">
+                <propertyInstance
+                  Id="ddcc11dc-d998-4606-b245-55a9bd205253"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="84628c22-9298-439a-bea5-e447ea604431">
+                <propertyInstance
+                  Id="93c66d52-5c35-4a52-b2dc-ace1af16de75"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="655f04d7-7f3b-4636-963b-52cc8f25df88">
+                <propertyInstance
+                  Id="d7ac6100-a464-4155-aa7f-0067bb396ce7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="34c87545-7928-4be9-a3c9-64602ab67865"
+            isDerived="false"
+            sourceEndRoleName="IBonus"
+            targetEndRoleName="DiamondType"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="367beea9-7c8c-40fd-a7ac-872401a9ada0"
+              LastKnownName="GameBonus"
+              LastKnownLocation="Package2_1728.uml" />
+            <description>Property DiamondType references type GameBonus.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3a4ce4a7-5f64-47eb-a559-b5328357cd85"
+                  name="IBonus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b8e08ad2-579e-451a-89fe-74aa6a8f07e5"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5d989024-c996-4fb3-b682-739d3d00b5ab"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="84be1b8b-51b2-4bf6-80fa-c082ae07be56"
+                  name="DiamondType"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="af538b32-f36b-4790-9710-b1f1a293709b"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="de26f52d-1c01-49d8-a26b-db821d2d651e"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributes>
+          <property
+            Id="3bdd280b-caaf-48f2-855f-febba713bdca"
+            name="DiamondType"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5946ad37-092f-4ff0-825b-7947b7c8ee34"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DIBonus Member%3DDiamondType"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7d69484f-ca7e-4cc0-bf9b-7fe5103c1405"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2017510d-0b05-4b7e-bcf4-c9875d198129">
+                    <propertyInstance
+                      Id="5b8612cd-f433-4197-a103-0ea9a600a83d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce3f8cf3-4500-4ad7-9d8d-a02b8c0597be">
+                    <propertyInstance
+                      Id="de0d5f17-eb80-4dab-8eed-2706e9e52023"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e516915-fa1a-47a5-8fa5-5f44825ca48d">
+                    <propertyInstance
+                      Id="776935f3-7130-40e5-972a-0643f6981117"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c132fc5a-beac-4491-b964-0ece3b1565e3">
+                    <propertyInstance
+                      Id="8c2ff19f-65ff-480b-bc0b-58efe757316b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7dc97589-d9c2-474a-b1b6-b4b8cb5b5bb5">
+                    <propertyInstance
+                      Id="9c6dfbfc-ad41-400d-bf82-fae226ce00f4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae3ddb18-ce28-438c-b081-ba357548e636">
+                    <propertyInstance
+                      Id="13b3d4ba-d790-4def-adfe-c2403b696902"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="63c479a1-8b77-4c74-9cb1-4e7cba432554">
+                    <propertyInstance
+                      Id="ee3586d8-50c2-4218-9be5-a53e672068e5"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="367beea9-7c8c-40fd-a7ac-872401a9ada0"
+                LastKnownName="GameBonus"
+                LastKnownLocation="Package2_1728.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="97b6a3c2-eb5c-4e52-b12b-c7084ba1e438"
+            name="Score"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0c98462b-ba81-4ff2-8a18-7a2e513a5a02"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FFrost%2Fdocuments%2Fvisual studio 2013%2FProjects%2FC%2523 IT Lab%2FZig Zag New%2FZigZag%2FZigZag.GameEngine%2Fbin%2FDebug%2FZigZag.GameEngine.dll&quot; Namespace%3DZigZag.GameEngine.GameObjects Type%3DIBonus Member%3DScore"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fd0c9c0e-96c3-4517-8a7c-9e9eed80be33"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ecac09c-5f8c-4661-acd7-1a385745add9">
+                    <propertyInstance
+                      Id="1763371c-bf9e-4d9e-a476-ac49c0bdfa0d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="547ccc9d-4fc2-4960-9793-fca14999bf09">
+                    <propertyInstance
+                      Id="07d087c6-1c62-4762-84c6-f9f79ec29a81"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6e95e1c-8c6e-4bd8-b964-2a22dc0751a1">
+                    <propertyInstance
+                      Id="99968ab7-bcec-4f49-9983-6f27b1c638dd"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aca90c48-8fcd-4b44-9940-011eeb4714ee">
+                    <propertyInstance
+                      Id="d7ca23f6-d237-49ce-84ac-18c957c05ce3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86483852-b216-450d-91b5-ec16c3a0a547">
+                    <propertyInstance
+                      Id="a3fa9b8f-4801-4824-a219-8f5874cbc66c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="918adc0a-4f23-4f7f-880d-69b5a584e682">
+                    <propertyInstance
+                      Id="c735bc02-ccc7-493f-b041-4b78d5702f5d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a1141b7-fba0-4ca9-a5de-d357967d1914">
+                    <propertyInstance
+                      Id="e8a07ac0-854d-4365-ad29-639c909c8cae"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ZigZag.GameEngine.Modeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

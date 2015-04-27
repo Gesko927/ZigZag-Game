@@ -68,9 +68,9 @@ namespace ZigZag.GameEngine
 
         #region Private Fields
 
-        private int _capacity;
-        private List<IGameObject> _gameObjects = new List<IGameObject>();
-        private List<MapHolder> _map;
+        private readonly int _capacity;
+        private readonly List<IGameObject> _gameObjects = new List<IGameObject>();
+        private readonly List<MapHolder> _map;
         private int _leftRotateCount = 0;
         private int _rightRotateCount = 0;
 

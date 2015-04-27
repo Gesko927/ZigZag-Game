@@ -6,8 +6,14 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZigZag.GameEngine", "ZigZag.GameEngine\ZigZag.GameEngine.csproj", "{1F394BEE-A87A-43BF-9BD1-143EBF0C83CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZigZag.ConsoleUI", "ZigZag.ConsoleUI\ZigZag.ConsoleUI.csproj", "{ACB3D317-183C-42D4-A4B6-D63F2016B16C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1F394BEE-A87A-43BF-9BD1-143EBF0C83CF} = {1F394BEE-A87A-43BF-9BD1-143EBF0C83CF}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZigZag.GameEngine.Test", "ZigZag.GameEngine.Test\ZigZag.GameEngine.Test.csproj", "{484CB923-2D7F-4113-B36F-12A4836197C0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ACB3D317-183C-42D4-A4B6-D63F2016B16C} = {ACB3D317-183C-42D4-A4B6-D63F2016B16C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

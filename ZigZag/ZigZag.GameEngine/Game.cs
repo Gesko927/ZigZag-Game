@@ -62,9 +62,16 @@ namespace ZigZag.GameEngine
 
             #endregion
 
+            /*
+             * Review GY: рекомендую проставити фігурні дужки для оператора if
+             */
             if (GameStartedEvent == null)
                 throw new NullReferenceException();
             this._status = GameStatus.InProgress;
+            /*
+             * Review GY: метод Invoke викликається автоматично.
+             * Викликати його явно не потрібно.
+             */
             GameStartedEvent.Invoke();
         }
 
@@ -79,9 +86,16 @@ namespace ZigZag.GameEngine
 
             #endregion
 
+            /*
+             * Review GY: рекомендую проставити фігурні дужки для оператора if
+             */
             if (GamePausedEvent == null)
                 throw new NullReferenceException();
             this._status = GameStatus.Paused;
+            /*
+             * Review GY: метод Invoke викликається автоматично.
+             * Викликати його явно не потрібно.
+             */
             GamePausedEvent.Invoke();
         }
 
@@ -96,9 +110,16 @@ namespace ZigZag.GameEngine
 
             #endregion
 
+            /*
+             * Review GY: рекомендую проставити фігурні дужки для оператора if
+             */
             if (GameResumedEvent == null)
                 throw new NullReferenceException("");
             this._status = GameStatus.InProgress;
+            /*
+             * Review GY: метод Invoke викликається автоматично.
+             * Викликати його явно не потрібно.
+             */
             GameResumedEvent.Invoke();
         }
 
@@ -113,9 +134,16 @@ namespace ZigZag.GameEngine
 
             #endregion
 
+            /*
+             * Review GY: рекомендую проставити фігурні дужки для оператора if
+             */
             if (GameStoppedEvent == null)
                 throw new NullReferenceException("");
             this._status = GameStatus.Completed;
+            /*
+             * Review GY: метод Invoke викликається автоматично.
+             * Викликати його явно не потрібно.
+             */
             GameStoppedEvent.Invoke();
         }
 

@@ -35,7 +35,11 @@ namespace ZigZag.GameEngine.GameObjects
         public Point CPoint
         {
             get { return this._cPoint; }
-//            protected set { this._cPoint = value; }
+            /*
+             * Review GY: видаляйте закоментований код.
+             * В разі необхідності його можна дістати з репозитарію.
+             */
+            //            protected set { this._cPoint = value; }
         }
 
         #endregion

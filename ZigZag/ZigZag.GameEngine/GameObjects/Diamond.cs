@@ -14,6 +14,10 @@ namespace ZigZag.GameEngine.GameObjects
         {
             get
             {
+                /*
+                 * Review GY: наявне використання магічних чисел.
+                 * Рекомендую перенести їх в константи або зчитувати з конфігураційного файлу.
+                 */
                 if (DiamondType == GameBonus.Common)
                 {
                     return 2;

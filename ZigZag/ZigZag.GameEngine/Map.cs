@@ -123,10 +123,20 @@ namespace ZigZag.GameEngine
         public int Height { get; private set; }
         public int RoadWidth { get; private set; }
         public int RoadHeight { get; set; }
+        /*
+         * Review GY: не рекомендую повертати всю колекцію назовні.
+         * Краще реалізувати метод, котрий поверне IGameObject за індексом.
+         * Такий підхід спростить код в класі ConsoleGame.
+         */
         public IEnumerable<IGameObject> GameObjects
         {
             get { return this._gameObjects; }
         }
+        /*
+         * Review GY: не рекомендую повертати всю колекцію назовні.
+         * Краще реалізувати 2 методи, котрі повертатимуть Rotation та Point за відповідним індексом.
+         * Такий підхід спростить код в класі ConsoleGame.
+         */
         public IEnumerable<MapHolder> Map
         {
             get { return this._map; }
@@ -188,7 +198,10 @@ namespace ZigZag.GameEngine
             {
                 // Generate Rotation.
                 #region Generate Rotation
-
+                /*
+                 * Review GY: присутнє використання magic numbers та дубляж коду.
+                 * Частини коду можна винести в методи з параметрами.
+                 */
                 if (Math.Abs(_leftRotateCount - _rightRotateCount) <= 5)
                 {
                     if (rnd.Next(2) == 0)

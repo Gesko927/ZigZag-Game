@@ -17,6 +17,9 @@ namespace ZigZag.ConsoleUI
         private int _diamondPosition = 0;
         private int _ballDiamondPosition = 0;
         private int _ballMapPosition = 0;
+        /*
+         * Review GY: _startDelay ніде не використовується.
+         */
         private readonly int _startDelay;
         private int _delay;
         private readonly System.Timers.Timer _moveBallTimer;
@@ -83,6 +86,11 @@ namespace ZigZag.ConsoleUI
                 var mapHolder = _game.GameMap.Map.ElementAt(_ballMapPosition);
                 var gameObject = _game.GameMap.GameObjects.ElementAtOrDefault(_ballDiamondPosition);
 
+                /*
+                 * Review GY: подібні виклики не є прийнятними - _game.GameMap.Ball.CPoint.Equals(gameObject.CPoint)
+                 * В даному випадку присутнє порушення принципу інкапсуляції.
+                 * Класи Ball та GameMap повинні містити відповідні методи для порівняння.
+                 */
                 // Diamond position.
                 if (gameObject != null && _game.GameMap.Ball.CPoint.Equals(gameObject.CPoint))
                 {
@@ -102,6 +110,9 @@ namespace ZigZag.ConsoleUI
                     isGameOver = true;
                     if (_game.Ball.Rotation == Rotation.Left)
                     {
+                        /*
+                         * Review GY: логіку переміщення об'єкту Ball варто розмістити в класі Game.
+                         */
                         _game.Ball.MoveAt(_game.Ball.CPoint.X - 1, _game.Ball.CPoint.Y + 1);
                     }
                     else
@@ -195,6 +206,10 @@ namespace ZigZag.ConsoleUI
                 {
                     if (_game.Status == GameStatus.Completed)
                     {
+                        /*
+                         * Review GY: не рекомендую закінчувати роботу потоку через виклик методу Abort().
+                         * Це може призвести до неочікуваних наслідків.
+                         */
                         _backgroundThread.Abort();
                     }
                 }
@@ -242,6 +257,10 @@ namespace ZigZag.ConsoleUI
             lock (_sync)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
+                /*
+                 * Review GY: уникайте в подальшому таких викликів - _game.GameMap.Map.ElementAt(_mapPosition).Point.X
+                 * Рефакторінг класу GameMap допоможе їх позбутися.
+                 */
                 Console.CursorLeft = _game.GameMap.Map.ElementAt(_mapPosition).Point.X;
                 Console.CursorTop = _game.GameMap.Map.ElementAt(_mapPosition).Point.Y;
 

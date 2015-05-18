@@ -14,7 +14,6 @@ namespace ZigZag.GameEngine
     {
         #region Private Fields
 
-        private GameStatus _status;
         private readonly Ball _ball;
 
         #endregion
@@ -26,7 +25,7 @@ namespace ZigZag.GameEngine
             this._ball = new Ball(startPoint);
             this.GameMap = new GameMap(mapWidth, mapHeight, roadWidth, roadHeigth, startPoint, _ball);
             this.TotalScore = 0;
-            this._status = GameStatus.ReadyToStart;
+            this.Status = GameStatus.ReadyToStart;
         }
 
         #endregion
@@ -35,10 +34,7 @@ namespace ZigZag.GameEngine
 
         public int TotalScore { get; set; }
 
-        public GameStatus Status
-        {
-            get { return this._status; }
-        }
+        public GameStatus Status { get; private set; }
 
         public GameMap GameMap { get; private set; }
 
@@ -55,7 +51,7 @@ namespace ZigZag.GameEngine
         {
             #region Validation
 
-            if (this._status != GameStatus.ReadyToStart)
+            if (this.Status != GameStatus.ReadyToStart)
             {
                 throw new InvalidOperationException("Only game with status 'ReadyToStart' can be started");
             }
@@ -63,16 +59,18 @@ namespace ZigZag.GameEngine
             #endregion
 
             if (GameStartedEvent == null)
+            {
                 throw new NullReferenceException();
-            this._status = GameStatus.InProgress;
-            GameStartedEvent.Invoke();
+            }
+            this.Status = GameStatus.InProgress;
+            GameStartedEvent();
         }
 
         public void Pause()
         {
             #region Validation
 
-            if (this._status != GameStatus.InProgress)
+            if (this.Status != GameStatus.InProgress)
             {
                 throw new InvalidOperationException("Only game with status 'InProgress' can be paused");
             }
@@ -80,16 +78,18 @@ namespace ZigZag.GameEngine
             #endregion
 
             if (GamePausedEvent == null)
+            {
                 throw new NullReferenceException();
-            this._status = GameStatus.Paused;
-            GamePausedEvent.Invoke();
+            }
+            this.Status = GameStatus.Paused;
+            GamePausedEvent();
         }
 
         public void Resume()
         {
             #region Validation
 
-            if (this._status != GameStatus.Paused)
+            if (this.Status != GameStatus.Paused)
             {
                 throw new InvalidOperationException("Only game with status 'Paused' can be resumed");
             }
@@ -97,26 +97,30 @@ namespace ZigZag.GameEngine
             #endregion
 
             if (GameResumedEvent == null)
-                throw new NullReferenceException("");
-            this._status = GameStatus.InProgress;
-            GameResumedEvent.Invoke();
+            {
+                throw new NullReferenceException();
+            }
+            this.Status = GameStatus.InProgress;
+            GameResumedEvent();
         }
 
         public void Stop()
         {
             #region Validation
 
-            if (this._status != GameStatus.InProgress)
+            if (this.Status != GameStatus.InProgress && this.Status != GameStatus.Paused)
             {
-                throw new InvalidOperationException("Only game with status 'InProgress' can be stopped");
+                throw new InvalidOperationException("Only game with status 'InProgress' or 'InPaused' can be stopped");
             }
 
             #endregion
 
             if (GameStoppedEvent == null)
-                throw new NullReferenceException("");
-            this._status = GameStatus.Completed;
-            GameStoppedEvent.Invoke();
+            {
+                throw new NullReferenceException();
+            }
+            this.Status = GameStatus.Completed;
+            GameStoppedEvent();
         }
 
         #endregion

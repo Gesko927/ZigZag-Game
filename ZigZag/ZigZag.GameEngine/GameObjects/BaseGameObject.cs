@@ -6,7 +6,7 @@ namespace ZigZag.GameEngine.GameObjects
     {
         #region Private Fields
 
-        private Point _cPoint = new Point();
+        private readonly Point _cPoint = new Point();
 
         #endregion
 
@@ -35,9 +35,12 @@ namespace ZigZag.GameEngine.GameObjects
         public Point CPoint
         {
             get { return this._cPoint; }
-//            protected set { this._cPoint = value; }
+        }
+        public bool CompareTo(IGameObject gameObject)
+        {
+            return this.CPoint.Equals(gameObject.CPoint);
         }
 
-        #endregion
+        #endregion   
     }
 }

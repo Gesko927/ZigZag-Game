@@ -6,5 +6,6 @@ namespace ZigZag.GameEngine.GameObjects
     {
         GameMap Map { get; set; }
         Point CPoint { get; }
+        bool CompareTo(IGameObject gameObject);
     }
 }

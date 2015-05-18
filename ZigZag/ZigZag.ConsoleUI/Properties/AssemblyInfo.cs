@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("ZigZag.ConsoleUI")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("ZigZag game console UI design")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("IT .NET LAB")]
 [assembly: AssemblyProduct("ZigZag.ConsoleUI")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]

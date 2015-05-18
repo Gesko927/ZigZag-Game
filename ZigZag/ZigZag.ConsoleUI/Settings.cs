@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using ZigZag.GameEngine;
 
 namespace ZigZag.ConsoleUI
 {
     public static class Settings
     {
-        #region Properties
+        #region Public Properties
 
         public static readonly int MapWidth;
         public static readonly int MapHeight;

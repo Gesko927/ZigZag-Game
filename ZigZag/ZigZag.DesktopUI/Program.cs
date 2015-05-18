@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZigZag.DesktopUI.Helpers;
 
 namespace ZigZag.DesktopUI
 {
@@ -16,7 +17,13 @@ namespace ZigZag.DesktopUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+#if DEBUG
+            NativeMethods.AllocConsole();
+#endif
+            Application.Run(new StartForm());
+#if DEBUG
+           NativeMethods.FreeConsole();
+#endif
         }
     }
 }

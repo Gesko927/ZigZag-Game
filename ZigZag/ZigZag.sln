@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZigZag.DesktopUI", "ZigZag.
 		{1F394BEE-A87A-43BF-9BD1-143EBF0C83CF} = {1F394BEE-A87A-43BF-9BD1-143EBF0C83CF}
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ZigZag.InstalationPachage", "ZigZag.InstalationPachage\ZigZag.InstalationPachage.vdproj", "{EC40D793-098D-4C46-8646-5394449DEDA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,9 @@ Global
 		{B322B846-71A2-4BE2-AF75-E6C69A7C10E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B322B846-71A2-4BE2-AF75-E6C69A7C10E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B322B846-71A2-4BE2-AF75-E6C69A7C10E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC40D793-098D-4C46-8646-5394449DEDA9}.Debug|Any CPU.ActiveCfg = Debug
+		{EC40D793-098D-4C46-8646-5394449DEDA9}.Release|Any CPU.ActiveCfg = Release
+		{EC40D793-098D-4C46-8646-5394449DEDA9}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -52,6 +52,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZigZag.GameEngine">
+      <HintPath>..\ZigZag.GameEngine\bin\Release\ZigZag.GameEngine.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameForms\ControlInstructuinForm.cs">
@@ -137,12 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ZigZag.GameEngine\ZigZag.GameEngine.csproj">
-      <Project>{1f394bee-a87a-43bf-9bd1-143ebf0c83cf}</Project>
-      <Name>ZigZag.GameEngine</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ball_skin.png" />

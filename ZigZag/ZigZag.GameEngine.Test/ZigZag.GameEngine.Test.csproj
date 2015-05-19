@@ -59,6 +59,7 @@
     <Compile Include="GameMapTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PointTest.cs" />
+    <Compile Include="Statistic\GameStatisticTest.cs" />
   </ItemGroup>
   <ItemGroup />
   <Choose>

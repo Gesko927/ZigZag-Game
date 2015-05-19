@@ -36,7 +36,9 @@ namespace ZigZag.GameEngine
                 #region Validation
 
                 if (x < 0 || y < 0)
+                {
                     throw new ArgumentException("Coordinate can't be < 0");
+                }
 
                 #endregion
 
@@ -50,9 +52,13 @@ namespace ZigZag.GameEngine
                 #region Validation
 
                 if (point == null)
+                {
                     throw new ArgumentException();
+                }
                 if (point.X < 0 || point.Y < 0)
+                {
                     throw new ArgumentException("Coordinate can't be < 0");
+                }
 
                 #endregion
 

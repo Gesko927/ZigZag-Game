@@ -29,11 +29,11 @@ namespace ZigZag.GameEngine.Test
         [TestMethod]
         public void TestUsualLifecycle()
         {
-            Game game = new Game(80, 40, 1, 1, new Point(40, 0));
-            game.GameStartedEvent += () => { };
-            game.GamePausedEvent += () => { };
-            game.GameResumedEvent += () => { };
-            game.GameStoppedEvent += () => { };
+            var game = new Game(80, 40, 1, 1, new Point(40, 0));
+            game.GameStartedEvent += delegate(object sender, EventArgs e) { };
+            game.GamePausedEvent += delegate(object sender, EventArgs e) { };
+            game.GameResumedEvent += delegate(object sender, EventArgs e) { };
+            game.GameStoppedEvent += delegate(object sender, EventArgs e) { };
             Assert.AreEqual(GameStatus.ReadyToStart, game.Status);
             game.Start();
             Assert.AreEqual(GameStatus.InProgress, game.Status);
@@ -49,8 +49,8 @@ namespace ZigZag.GameEngine.Test
         [TestMethod]
         public void TestStart_WrongStatus_1()
         {
-            Game game = new Game(80, 40, 1, 1, new Point(40, 0));
-            game.GameStartedEvent += () => { };
+            var game = new Game(80, 40, 1, 1, new Point(40, 0));
+            game.GameStartedEvent += delegate(object sender, EventArgs e) { };
             game.Start();
             game.Start();
         }
@@ -59,9 +59,9 @@ namespace ZigZag.GameEngine.Test
         [ExpectedException(typeof(InvalidOperationException))]
         public void TestStart_WrongStatus_2()
         {
-            Game game = new Game(80, 40, 1, 1, new Point(40, 0));
-            game.GameStartedEvent += () => { };
-            game.GameStoppedEvent += () => { };
+            var game = new Game(80, 40, 1, 1, new Point(40, 0));
+            game.GameStartedEvent += delegate(object sender, EventArgs e) { };
+            game.GameStoppedEvent += delegate(object sender, EventArgs e) { };
             game.Start();
             game.Stop();
             game.Start();
@@ -71,8 +71,8 @@ namespace ZigZag.GameEngine.Test
         [ExpectedException(typeof(InvalidOperationException))]
         public void TestPause_WrongStatus_1()
         {
-            Game game = new Game(80, 40, 1, 1, new Point(40, 0));
-            game.GamePausedEvent += () => { };
+            var game = new Game(80, 40, 1, 1, new Point(40, 0));
+            game.GamePausedEvent += delegate(object sender, EventArgs e) { };
             game.Pause();
         }
 
@@ -80,9 +80,9 @@ namespace ZigZag.GameEngine.Test
         [ExpectedException(typeof(InvalidOperationException))]
         public void TestPause_WrongStatus_2()
         {
-            Game game = new Game(80, 40, 1, 1, new Point(40, 0));
-            game.GameStartedEvent += () => { };
-            game.GamePausedEvent += () => { };          
+            var game = new Game(80, 40, 1, 1, new Point(40, 0));
+            game.GameStartedEvent += delegate(object sender, EventArgs e) { };
+            game.GamePausedEvent += delegate(object sender, EventArgs e) { };        
             game.Start();
             game.Pause();
             game.Pause();
@@ -92,8 +92,8 @@ namespace ZigZag.GameEngine.Test
         [ExpectedException(typeof(InvalidOperationException))]
         public void TestResume_WrongStatus_1()
         {
-            Game game = new Game(80, 40, 1, 1, new Point(40, 0));
-            game.GameResumedEvent += () => { };
+            var game = new Game(80, 40, 1, 1, new Point(40, 0));
+            game.GameResumedEvent += delegate(object sender, EventArgs e) { };
             game.Resume();
         }
 
@@ -101,9 +101,9 @@ namespace ZigZag.GameEngine.Test
         [ExpectedException(typeof(InvalidOperationException))]
         public void TestResume_WrongStatus_2()
         {
-            Game game = new Game(80, 40, 1, 1, new Point(40, 0));
-            game.GameStartedEvent += () => { };
-            game.GameResumedEvent += () => { };
+            var game = new Game(80, 40, 1, 1, new Point(40, 0));
+            game.GameStartedEvent += delegate(object sender, EventArgs e) { };
+            game.GameResumedEvent += delegate(object sender, EventArgs e) { };
             game.Start();
             game.Resume();
         }
@@ -112,8 +112,8 @@ namespace ZigZag.GameEngine.Test
         [ExpectedException(typeof(InvalidOperationException))]
         public void TestStop_WrongStatus_1()
         {
-            Game game = new Game(80, 40, 1, 1, new Point(40, 0));
-            game.GameStoppedEvent += () => { };
+            var game = new Game(80, 40, 1, 1, new Point(40, 0));
+            game.GameStoppedEvent += delegate(object sender, EventArgs e) { };
             game.Stop();
         }
 
@@ -121,9 +121,9 @@ namespace ZigZag.GameEngine.Test
         [ExpectedException(typeof(InvalidOperationException))]
         public void TestStop_WrongStatus_2()
         {
-            Game game = new Game(80, 40, 1, 1, new Point(40, 0));
-            game.GameStartedEvent += () => { };
-            game.GameStoppedEvent += () => { };
+            var game = new Game(80, 40, 1, 1, new Point(40, 0));
+            game.GameStartedEvent += delegate(object sender, EventArgs e) { };
+            game.GameStoppedEvent += delegate(object sender, EventArgs e) { };
             game.Start();
             game.Stop();
             game.Stop();
@@ -174,19 +174,19 @@ namespace ZigZag.GameEngine.Test
             List<string> receivedEvents = new List<string>();
             Game game = new Game(80, 20, 1, 1, new Point(40, 0));
 
-            game.GameStartedEvent += () =>
+            game.GameStartedEvent += delegate(object sender, EventArgs e)
             {
                 receivedEvents.Add(started);
             };
-            game.GamePausedEvent += () =>
+            game.GamePausedEvent += delegate(object sender, EventArgs e)
             {
                 receivedEvents.Add(paused);
             };
-            game.GameResumedEvent += () =>
+            game.GameResumedEvent += delegate(object sender, EventArgs e)
             {
                 receivedEvents.Add(resumed);
             };
-            game.GameStoppedEvent += () =>
+            game.GameStoppedEvent += delegate(object sender, EventArgs e)
             {
                 receivedEvents.Add(stopped);
             };
@@ -215,7 +215,7 @@ namespace ZigZag.GameEngine.Test
         public void TestUninitializedPauseEvent()
         {
             Game game = new Game(80, 20, 1, 1, new Point(40, 0));
-            game.GameStartedEvent += () => { };
+            game.GameStartedEvent += delegate(object sender, EventArgs e) { };
             game.Start();
             game.Pause();
         }
@@ -225,8 +225,8 @@ namespace ZigZag.GameEngine.Test
         public void TestUninitializedResumeEvent()
         {
             Game game = new Game(80, 20, 1, 1, new Point(40, 0));
-            game.GameStartedEvent += () => { };
-            game.GamePausedEvent += () => { };
+            game.GameStartedEvent += delegate(object sender, EventArgs e) { };
+            game.GamePausedEvent += delegate(object sender, EventArgs e) { };
             game.Start();
             game.Pause();
             game.Resume();
@@ -237,15 +237,14 @@ namespace ZigZag.GameEngine.Test
         public void TestUninitializedStopEvent()
         {
             Game game = new Game(80, 20, 1, 1, new Point(40, 0));
-            game.GameStartedEvent += () => { };
-            game.GamePausedEvent += () => { };
-            game.GameResumedEvent += () => { };
+            game.GameStartedEvent += delegate(object sender, EventArgs e) { };
+            game.GamePausedEvent += delegate(object sender, EventArgs e) { };
+            game.GameResumedEvent += delegate(object sender, EventArgs e) { };
             game.Start();
             game.Pause();
             game.Resume();
             game.Stop();
         }
-
 
         #endregion
     }

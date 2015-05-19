@@ -124,7 +124,7 @@ namespace ZigZag.DesktopUI
             {
                 SoundManager.MouseClick();
                 var btn = (Button) sender;
-                this._game.GameStartedEvent += () =>
+                this._game.GameStartedEvent += delegate (object o, EventArgs eventArgs)
                 {
                     this.DrawMap(this._dc);
                     this.DrawBall(this._dc, this._ballPosition);
@@ -147,7 +147,7 @@ namespace ZigZag.DesktopUI
             if (this._game.Status == GameStatus.InProgress)
             {
                 SoundManager.MouseClick();
-                this._game.GamePausedEvent += () =>
+                this._game.GamePausedEvent += delegate (object o, EventArgs eventArgs)
                 {
                     this.PauseBtn.Enabled = false;
                     this.ResumeBtn.Enabled = true;
@@ -163,7 +163,7 @@ namespace ZigZag.DesktopUI
             if (this._game.Status == GameStatus.Paused)
             {
                 SoundManager.MouseClick();
-                this._game.GameResumedEvent += () =>
+                this._game.GameResumedEvent += delegate (object o, EventArgs eventArgs)
                 {
                     this.ResumeBtn.Enabled = false;
                     this.PauseBtn.Enabled = true;
@@ -184,7 +184,7 @@ namespace ZigZag.DesktopUI
             if (this._game.Status == GameStatus.InProgress ||
                 this._game.Status == GameStatus.Paused)
             {
-                this._game.GameStoppedEvent += () =>
+                this._game.GameStoppedEvent += delegate (object o, EventArgs eventArgs)
                 {
                     this._mapRedrawTimer.Stop();
                     var gameOverForm = new GameOverForm(this._game.TotalScore);

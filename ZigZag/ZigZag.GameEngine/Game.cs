@@ -63,7 +63,7 @@ namespace ZigZag.GameEngine
                 throw new NullReferenceException();
             }
             this.Status = GameStatus.InProgress;
-            GameStartedEvent();
+            this.GameStartedEvent(this, EventArgs.Empty);
         }
 
         public void Pause()
@@ -82,7 +82,7 @@ namespace ZigZag.GameEngine
                 throw new NullReferenceException();
             }
             this.Status = GameStatus.Paused;
-            GamePausedEvent();
+            this.GamePausedEvent(this, EventArgs.Empty);
         }
 
         public void Resume()
@@ -101,7 +101,7 @@ namespace ZigZag.GameEngine
                 throw new NullReferenceException();
             }
             this.Status = GameStatus.InProgress;
-            GameResumedEvent();
+            this.GameResumedEvent(this, EventArgs.Empty);
         }
 
         public void Stop()
@@ -120,17 +120,17 @@ namespace ZigZag.GameEngine
                 throw new NullReferenceException();
             }
             this.Status = GameStatus.Completed;
-            GameStoppedEvent();
+            this.GameStoppedEvent(this, EventArgs.Empty);
         }
 
         #endregion
 
         #region Events
 
-        public event Action GameStartedEvent;
-        public event Action GameStoppedEvent;
-        public event Action GamePausedEvent;
-        public event Action GameResumedEvent;
+        public event EventHandler GameStartedEvent;
+        public event EventHandler GameStoppedEvent;
+        public event EventHandler GamePausedEvent;
+        public event EventHandler GameResumedEvent;
 
         #endregion
     }

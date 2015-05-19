@@ -279,12 +279,12 @@ namespace ZigZag.ConsoleUI
                 _mapPosition++;
             }
         }
-        private void OnStart()
+        private void OnStart(object sender, EventArgs e)
         {
             DrawMap();
             _moveBallTimer.Start();
         }
-        private void OnStop()
+        private void OnStop(object sender, EventArgs e)
         {
             Console.CursorLeft = 0;
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -296,11 +296,11 @@ namespace ZigZag.ConsoleUI
             Console.WriteLine("Press Tab To View Score Table");
             Console.WriteLine("Press Enter To Quit");
         }
-        private void OnPause()
+        private void OnPause(object sender, EventArgs e)
         {
             _moveBallTimer.Stop();
         }
-        private void OnResume()
+        private void OnResume(object sender, EventArgs e)
         {
             _moveBallTimer.Start();
         }

@@ -58,13 +58,11 @@ namespace ZigZag.GameEngine.Statistic
 
         public GameStatistic()
         {
-            _dirPath = Assembly.GetEntryAssembly().Location;
-            _dirPath = Path.GetDirectoryName(_dirPath);
+            _dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             _binaryFormatter = new BinaryFormatter();
             if (_dirPath != null)
             {
-                _dirPath = Path.Combine(_dirPath, "Rating");
-
+                _dirPath = Path.Combine(_dirPath, "ZigZag");
                 if (!Directory.Exists(_dirPath))
                 {
                     Directory.CreateDirectory(_dirPath);
@@ -110,10 +108,6 @@ namespace ZigZag.GameEngine.Statistic
                 });
                 _binaryFormatter.Serialize(fs, Top);
             }
-        }
-        public void Clear()
-        {
-            Top.Clear();
         }
 
         #endregion

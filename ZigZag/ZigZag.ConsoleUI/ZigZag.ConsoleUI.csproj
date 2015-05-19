@@ -49,8 +49,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="ZigZag.GameEngine">
-      <HintPath>..\ZigZag.GameEngine\bin\Debug\ZigZag.GameEngine.dll</HintPath>
+    <Reference Include="ZigZag.GameEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=84a3c4282ebf1a60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ZigZag.GameEngine\bin\Release\ZigZag.GameEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

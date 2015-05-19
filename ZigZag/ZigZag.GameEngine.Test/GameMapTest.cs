@@ -70,20 +70,16 @@ namespace ZigZag.GameEngine.Test
         [TestMethod]
         public void TestAddGameObject_Player()
         {
-            GameMap map = new GameMap(80, 20, 1, 1, new Point(40, 0), new Ball(40, 0));
+            var map = new GameMap(80, 20, 1, 1, new Point(40, 0), new Ball(40, 0));
             IGameObject ball = new Ball(1, 1);
             map.AddGameObject(ball);
-
-//             IGameObject lastGameObject = map.GameObjects.Last();
-//             Assert.AreSame(lastGameObject, ball);
-//             Assert.AreSame(map, ball.Map);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void TestAddGameObject_Player_Wrong_Position()
         {
-            GameMap map = new GameMap(80, 20, 1, 1, new Point(40, 0), new Ball(40, 0));
+            var map = new GameMap(80, 20, 1, 1, new Point(40, 0), new Ball(40, 0));
             IGameObject ball = new Ball(90, 1);
             map.AddGameObject(ball);
         }
@@ -110,6 +106,75 @@ namespace ZigZag.GameEngine.Test
             GameMap map = new GameMap(80, 20, 1, 1, new Point(40, 0), new Ball(40, 0));
             IGameObject diamond = new Diamond(GameBonus.Average, 1, 1);
             Assert.IsFalse(map.CanBePlaced(diamond, 0, 5));
+        }
+
+        [TestMethod]
+        public void TestGetGameObject()
+        {
+            var map = new GameMap(80, 20, 1, 1, new Point(40, 0), new Ball(40, 0));
+            var obj = map.GetGameObject(0);
+            Assert.IsNotNull(obj);
+            obj = map.GetGameObject(100000);
+            Assert.IsNull(obj);
+        }
+
+        [TestMethod]
+        public void TestGetMapItem()
+        {
+            var map = new GameMap(80, 20, 1, 1, new Point(40, 0), new Ball(40, 0));
+            var item = map.GetMapItem(0);
+            Assert.IsNotNull(item);
+            Assert.IsTrue(item.Point.Equals(new Point(40, 0)));
+            item = map.GetMapItem(100000);
+            Assert.IsNull(item);
+        }
+
+        [TestMethod]
+        public void TestGetMapItemPoint()
+        {
+            var map = new GameMap(80, 20, 1, 1, new Point(40, 0), new Ball(40, 0));
+            var item = map.GetMapItemPoint(0);
+            Assert.IsNotNull(item);
+            Assert.IsTrue(item.Equals(new Point(40, 0)));
+            item = map.GetMapItemPoint(100000);
+            Assert.IsNull(item);
+        }
+
+        [TestMethod]
+        public void TestMapHolderConstructor1()
+        {
+            var mapHolder = new GameMap.MapHolder(Rotation.Left);
+            Assert.AreEqual(mapHolder.Rotation, Rotation.Left);
+            Assert.IsTrue(mapHolder.Point.Equals(new Point()));
+        }
+
+        [TestMethod]
+        public void TestMapHolderConstructor2()
+        {
+            var mapHolder = new GameMap.MapHolder(Rotation.Left, 1, 1);
+            Assert.AreEqual(mapHolder.Rotation, Rotation.Left);
+            Assert.IsTrue(mapHolder.Point.Equals(new Point(1, 1)));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestMapHolderConstructor2Exception()
+        {
+            var mapHolder = new GameMap.MapHolder(Rotation.Left, -1, -5);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestMapHolderConstructor3Exception1()
+        {
+            var mapHolder = new GameMap.MapHolder(Rotation.Left, new Point(-1, -3));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestMapHolderConstructor3Exception2()
+        {
+            var mapHolder = new GameMap.MapHolder(Rotation.Left, null);
         }
 
         #endregion

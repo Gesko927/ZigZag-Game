@@ -150,7 +150,7 @@
             this.MaximizeBox = false;
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "User Name";
+            this.Text = "Main menu";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.StartForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPcb)).EndInit();

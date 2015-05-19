@@ -4,11 +4,7 @@ namespace ZigZag.GameEngine.GameObjects
 {
     public class Diamond : BaseGameObject, IBonus
     {
-        #region Private Constant Fields
-
-        private const int CommonScoreValue = 2;
-        private const int AverageScoreValue = 5;
-        private const int GreatScoreValue = 10;
+        #region Private Fields
 
         #endregion
 
@@ -18,16 +14,21 @@ namespace ZigZag.GameEngine.GameObjects
         {
             get
             {
-                switch (DiamondType)
+                /*
+                 * Review GY: наявне використання магічних чисел.
+                 * Рекомендую перенести їх в константи або зчитувати з конфігураційного файлу.
+                 */
+                if (DiamondType == GameBonus.Common)
                 {
-                    case GameBonus.Common:
-                        return CommonScoreValue;
-                    case GameBonus.Average:
-                        return AverageScoreValue;
-                    case GameBonus.Great:
-                        return GreatScoreValue;
-                    default:
-                        return 0;
+                    return 2;
+                }
+                else if (DiamondType == GameBonus.Average)
+                {
+                    return 5;
+                }
+                else
+                {
+                    return 10;
                 }
             }
         }

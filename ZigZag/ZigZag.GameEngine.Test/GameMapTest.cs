@@ -19,6 +19,8 @@ namespace ZigZag.GameEngine.Test
             GameMap map = new GameMap(80, 20, 1, 1, new Point(40, 0), new Ball(40, 0));
             Assert.AreEqual(80, map.Width);
             Assert.AreEqual(20, map.Height);
+            Assert.IsNotNull(map.GameObjects);
+            Assert.IsNotNull(map.GameObjects.Count());
         }
 
         [TestMethod]
@@ -74,9 +76,9 @@ namespace ZigZag.GameEngine.Test
             IGameObject ball = new Ball(1, 1);
             map.AddGameObject(ball);
 
-//             IGameObject lastGameObject = map.GameObjects.Last();
-//             Assert.AreSame(lastGameObject, ball);
-//             Assert.AreSame(map, ball.Map);
+            IGameObject lastGameObject = map.GameObjects.Last();
+            Assert.AreSame(lastGameObject, ball);
+            Assert.AreSame(map, ball.Map);
         }
 
         [TestMethod]

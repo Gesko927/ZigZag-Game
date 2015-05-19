@@ -6,7 +6,7 @@ namespace ZigZag.ConsoleUI
     {
         static void Main(string[] args)
         {
-            var cg = new ConsoleGame();
+            ConsoleGame cg = new ConsoleGame();
             Console.WriteLine("Press Enter To Start.");
             Console.WriteLine("Press Tab To Change Name.");
         }

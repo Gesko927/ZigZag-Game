@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 using System.Timers;
 using ZigZag.GameEngine;
 using ZigZag.GameEngine.GameObjects;
-using ZigZag.GameEngine.Statistic;
 
 namespace ZigZag.ConsoleUI
 {
@@ -17,12 +17,15 @@ namespace ZigZag.ConsoleUI
         private int _diamondPosition = 0;
         private int _ballDiamondPosition = 0;
         private int _ballMapPosition = 0;
+        /*
+         * Review GY: _startDelay ніде не використовується.
+         */
+        private readonly int _startDelay;
         private int _delay;
         private readonly System.Timers.Timer _moveBallTimer;
         private readonly object _sync = new object();
         private readonly GameStatistic _top = new GameStatistic();
         private string _name = "Player";
-        private bool _stopBackgroundThread = true;
 
         #endregion
 
@@ -31,6 +34,7 @@ namespace ZigZag.ConsoleUI
         public ConsoleGame()
         {
             Console.CursorVisible = false;
+            _startDelay = _delay;
             _delay = 700;
             _game = new Game(Settings.MapWidth, Settings.MapHeight, Settings.RoadWidth, Settings.RoadHeight, Settings.StartPoint);
             _backgroundThread = new Thread(StartBackgroundThreadListener);
@@ -77,13 +81,18 @@ namespace ZigZag.ConsoleUI
             lock(_sync)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                var isGameOver = false;
+                bool isGameOver = false;
                 char fill;
-                var mapHolder = _game.GameMap.GetMapItem(_ballMapPosition);
-                var gameObject = _game.GameMap.GetGameObject(_ballDiamondPosition);
+                var mapHolder = _game.GameMap.Map.ElementAt(_ballMapPosition);
+                var gameObject = _game.GameMap.GameObjects.ElementAtOrDefault(_ballDiamondPosition);
 
+                /*
+                 * Review GY: подібні виклики не є прийнятними - _game.GameMap.Ball.CPoint.Equals(gameObject.CPoint)
+                 * В даному випадку присутнє порушення принципу інкапсуляції.
+                 * Класи Ball та GameMap повинні містити відповідні методи для порівняння.
+                 */
                 // Diamond position.
-                if (gameObject != null && _game.GameMap.Ball.CompareTo(gameObject))
+                if (gameObject != null && _game.GameMap.Ball.CPoint.Equals(gameObject.CPoint))
                 {
                     var bonus = gameObject as IBonus;
                     if (bonus != null)
@@ -113,7 +122,7 @@ namespace ZigZag.ConsoleUI
                 }
                 else
                 {
-                    mapHolder = _game.GameMap.GetMapItem(_ballMapPosition);
+                    mapHolder = _game.GameMap.Map.ElementAt(_ballMapPosition);
                     _game.Ball.MoveAt(mapHolder.Point.X, mapHolder.Point.Y);
                 }
                 Console.CursorLeft = _game.Ball.CPoint.X;
@@ -151,8 +160,7 @@ namespace ZigZag.ConsoleUI
         }
         private void StartBackgroundThreadListener(object o)
         {
-            this._stopBackgroundThread = false;
-            while (!_stopBackgroundThread)
+            while (true)
             {
                 if (OnButtonClickEvent == null)
                     throw new NullReferenceException();
@@ -198,8 +206,11 @@ namespace ZigZag.ConsoleUI
                 {
                     if (_game.Status == GameStatus.Completed)
                     {
-                        // Abort background thread;
-                        _stopBackgroundThread = true;
+                        /*
+                         * Review GY: не рекомендую закінчувати роботу потоку через виклик методу Abort().
+                         * Це може призвести до неочікуваних наслідків.
+                         */
+                        _backgroundThread.Abort();
                     }
                 }
                 else if (consoleKeyInfo.Key == ConsoleKey.Enter)
@@ -246,19 +257,23 @@ namespace ZigZag.ConsoleUI
             lock (_sync)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.CursorLeft = _game.GameMap.GetMapItem(_mapPosition).Point.X;
-                Console.CursorTop = _game.GameMap.GetMapItem(_mapPosition).Point.Y;
+                /*
+                 * Review GY: уникайте в подальшому таких викликів - _game.GameMap.Map.ElementAt(_mapPosition).Point.X
+                 * Рефакторінг класу GameMap допоможе їх позбутися.
+                 */
+                Console.CursorLeft = _game.GameMap.Map.ElementAt(_mapPosition).Point.X;
+                Console.CursorTop = _game.GameMap.Map.ElementAt(_mapPosition).Point.Y;
 
-                var fill = '#';
-                if (_game.GameMap.GetGameObject(_diamondPosition) != null)
+                char fill = '#';
+                if (_game.GameMap.GameObjects.ElementAtOrDefault(_diamondPosition) != null)
                 {
-                    var diamondPoint = _game.GameMap.GetGameObject(_diamondPosition).CPoint;
-                    var mapPoint = _game.GameMap.GetMapItem(_mapPosition).Point;
+                    Point diamondPoint = _game.GameMap.GameObjects.ElementAt(_diamondPosition).CPoint;
+                    Point mapPoint = _game.GameMap.Map.ElementAt(_mapPosition).Point;
                     if (diamondPoint.Equals(mapPoint))
                     {
-                        if (_game.GameMap.GetGameObject(_diamondPosition) is Diamond)
+                        if (_game.GameMap.GameObjects.ElementAt(_diamondPosition) is Diamond)
                         {
-                            var diamond = (Diamond)_game.GameMap.GetGameObject(_diamondPosition);
+                            var diamond = (Diamond)_game.GameMap.GameObjects.ElementAt(_diamondPosition);
                             if (diamond.DiamondType == GameBonus.Common)
                             {
                                 fill = 'C';

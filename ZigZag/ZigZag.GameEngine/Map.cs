@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Sockets;
 using ZigZag.GameEngine.GameObjects;
 
 namespace ZigZag.GameEngine
@@ -72,7 +71,6 @@ namespace ZigZag.GameEngine
         private readonly int _capacity;
         private readonly List<IGameObject> _gameObjects = new List<IGameObject>();
         private readonly List<MapHolder> _map;
-        private readonly int _maxDifference = 6;
         private int _leftRotateCount = 0;
         private int _rightRotateCount = 0;
 
@@ -125,48 +123,29 @@ namespace ZigZag.GameEngine
         public int Height { get; private set; }
         public int RoadWidth { get; private set; }
         public int RoadHeight { get; set; }
+        /*
+         * Review GY: не рекомендую повертати всю колекцію назовні.
+         * Краще реалізувати метод, котрий поверне IGameObject за індексом.
+         * Такий підхід спростить код в класі ConsoleGame.
+         */
+        public IEnumerable<IGameObject> GameObjects
+        {
+            get { return this._gameObjects; }
+        }
+        /*
+         * Review GY: не рекомендую повертати всю колекцію назовні.
+         * Краще реалізувати 2 методи, котрі повертатимуть Rotation та Point за відповідним індексом.
+         * Такий підхід спростить код в класі ConsoleGame.
+         */
+        public IEnumerable<MapHolder> Map
+        {
+            get { return this._map; }
+        }
         public Ball Ball { get; private set; }
 
         #endregion
 
         #region Public Methods
-
-        public IGameObject GetGameObject(int index)
-        {
-            if (index < this._gameObjects.Count)
-            {
-                return this._gameObjects[index];
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        public MapHolder GetMapItem(int index)
-        {
-            if (index < this._map.Count)
-            {
-                return this._map[index];
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        public Point GetMapItemPoint(int index)
-        {
-            if (index < this._map.Count)
-            {
-                return this._map[index].Point;
-            }
-            else
-            {
-                return null;
-            }
-
-        }
 
         public void AddGameObject(IGameObject gameObject)
         {
@@ -199,8 +178,8 @@ namespace ZigZag.GameEngine
         {
             if (gameObject is Ball || gameObject is Diamond)
             {
-                var flag = ((x >= 0) && (x < this.Width) && (y >= 0) /*&& (y < this.Height)*/);
-
+                bool flag = ((x >= 0) && (x < this.Width) && (y >= 0) /*&& (y < this.Height)*/);
+                
                 return flag;
             }
             else
@@ -211,93 +190,97 @@ namespace ZigZag.GameEngine
 
         private void GenerateMap(Point startPoint)
         {
-            var rnd = new Random();
+            Random rnd = new Random();
             _map.Add(new MapHolder(Rotation.Left, startPoint));
-            _map.Add(new MapHolder(Rotation.Left, GetNextPoint()));
             _map.Add(new MapHolder(Rotation.Left, GetNextPoint()));
             var i = _map.Count;
             while (i++ < _capacity)
             {
                 // Generate Rotation.
-                #region Generate Map Rotation
-
-                if (Math.Abs(_leftRotateCount - _rightRotateCount) <= _maxDifference)
+                #region Generate Rotation
+                /*
+                 * Review GY: присутнє використання magic numbers та дубляж коду.
+                 * Частини коду можна винести в методи з параметрами.
+                 */
+                if (Math.Abs(_leftRotateCount - _rightRotateCount) <= 5)
                 {
-                    AddToMap(rnd.Next(2) == 0 ? Rotation.Left : Rotation.Right);
-                }
-                else
-                {
-                    var flag = _leftRotateCount < _rightRotateCount;
-                    if (rnd.Next(8) == 0)
+                    if (rnd.Next(2) == 0)
                     {
-                        AddToMap(flag ? Rotation.Right : Rotation.Left);
+                        _map.Add(new MapHolder(Rotation.Left, GetNextPoint()));
+                        _leftRotateCount++;
                     }
                     else
                     {
-                        AddToMap(flag ? Rotation.Left : Rotation.Right);
+                        _map.Add(new MapHolder(Rotation.Right, GetNextPoint()));
+                        _rightRotateCount++;
+                    }
+                }
+                else
+                {
+                    if (_leftRotateCount < _rightRotateCount)
+                    {
+                        if (rnd.Next(3) == 0)
+                        {
+                            _map.Add(new MapHolder(Rotation.Right, GetNextPoint()));
+                            _rightRotateCount++;
+                        }
+                        else
+                        {
+                            _map.Add(new MapHolder(Rotation.Left, GetNextPoint()));
+                            _leftRotateCount++;
+                        }
+                    }
+                    else
+                    {
+                        if (rnd.Next(3) == 0)
+                        {
+                            _map.Add(new MapHolder(Rotation.Left, GetNextPoint()));
+                            _leftRotateCount++;
+                        }
+                        else
+                        {
+                            _map.Add(new MapHolder(Rotation.Right, GetNextPoint()));
+                            _rightRotateCount++;
+                        }
                     }
                 }
 
                 #endregion
 
-                DiamondGemerate();
-            }
-        }
-
-        private void DiamondGemerate()
-        {
-            var rnd = new Random();
-            var diamondGen = rnd.Next(10);
-            if (diamondGen == 0)
-            {
-                this.AddGameObject(new Diamond(GameBonus.Common, _map.Last().Point));
-            }
-            else if (diamondGen < 5)
-            {
-                this.AddGameObject(new Diamond(GameBonus.Average, _map.Last().Point));
-            }
-            else
-            {
-                this.AddGameObject(new Diamond(GameBonus.Great, _map.Last().Point));
-            }
-        }
-
-        private void AddToMap(Rotation rotation)
-        {
-            _map.Add(new MapHolder(rotation, GetNextPoint()));
-            _map.Add(new MapHolder(rotation, GetNextPoint()));
-            if (rotation == Rotation.Left)
-            {
-                _leftRotateCount += 2;
-            }
-            else
-            {
-                _rightRotateCount += 2;
+                // Generate diamond.
+                if (rnd.Next(15) <= 5)
+                {
+                    var diamondGen = rnd.Next(10);
+                    if (diamondGen == 0)
+                    {
+                        this.AddGameObject(new Diamond(GameBonus.Common, _map.Last().Point));
+                    }
+                    else if (diamondGen < 5)
+                    {
+                        this.AddGameObject(new Diamond(GameBonus.Average, _map.Last().Point));
+                    }
+                    else
+                    {
+                        this.AddGameObject(new Diamond(GameBonus.Great, _map.Last().Point));
+                    }
+                }
             }
         }
 
         private Point GetNextPoint()
         {
-            var startPoint = new Point(_map.Last().Point.X, _map.Last().Point.Y);
-            var angleRad = (Math.PI / 180) * 45;
-            var x = (int)Math.Round(RoadHeight * Math.Cos(angleRad));
-            var y = (int)Math.Round(RoadHeight * Math.Sin(angleRad));
-
-            return _map.Last().Rotation == Rotation.Left ?
-                new Point(startPoint.X - x, startPoint.Y + y) :
-                new Point(startPoint.X + x, startPoint.Y + y);    
-//             var point = new Point(_map.Last().Point.X, _map.Last().Point.Y);
-//             if (_map.Last().Rotation == Rotation.Left)
-//             {
-//                 point.X -= RoadWidth;
-//                 point.Y += RoadHeight;
-//             }
-//             else
-//             {
-//                 point.X += RoadWidth;
-//                 point.Y += RoadHeight;
-//             }
-//             return point;
+            Point point = new Point(_map.Last().Point.X, _map.Last().Point.Y);
+            if (_map.Last().Rotation == Rotation.Left)
+            {
+                point.X -= RoadWidth;
+                point.Y += RoadHeight;
+            }
+            else
+            {
+                point.X += RoadWidth;
+                point.Y += RoadHeight;
+            }
+            return point;
         }
 
         #endregion

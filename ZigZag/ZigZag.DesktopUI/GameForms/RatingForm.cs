@@ -8,12 +8,17 @@ namespace ZigZag.DesktopUI.GameForms
         public RatingForm()
         {
             InitializeComponent();
-
+            /*
+             * ВВ: іниціалізацію елементів форми слід виконувати в обробнику події Form_Load
+             */
             var statistic = new GameStatistic();
             this.RatingDataGridView.Rows.Add();
             var row = new DataGridViewRow();           
             var index = 0;
             this.RatingDataGridView.RowCount = 1;
+            /*
+             * ВВ: дані до таблиці краще "прив'язувати" через властивість DataSource
+             */
             if (statistic.Top.Count != 0)
             {
                 this.RatingDataGridView.RowCount = statistic.Top.Count;

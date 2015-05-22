@@ -2,10 +2,20 @@
 
 namespace ZigZag.DesktopUI.Helpers
 {
+    /*
+     * ВВ: 
+     *      рекомендую клас зробити нестатичним і функції його також нестатичні
+     *      часто для таких класів також роблять інтерфейс
+     * 
+     */
     static class SoundManager
     {
         #region Public Static Fields
 
+        /*
+         * ВВ: не потрібно використовувати статичні поля
+         * 
+         */
         public static SoundMode SoundConfig;
 
         #endregion

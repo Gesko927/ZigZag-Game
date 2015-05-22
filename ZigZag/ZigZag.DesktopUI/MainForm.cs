@@ -42,6 +42,12 @@ namespace ZigZag.DesktopUI
         {
             get
             {
+                /*
+                 * ВВ: 
+                 *      ця функція не повинна змінювати значення полі форми
+                 *      це слід реалізувати у set
+                 * 
+                 */
                 this.ScoreLbl.Text = this._game.TotalScore.ToString();
                 return this._game.TotalScore;
             }
@@ -56,6 +62,9 @@ namespace ZigZag.DesktopUI
         {
             InitializeComponent();
             this._userName = userName;
+            /*
+             * ВВ: іниціалізацію елементів форми слід виконувати в обробнику події Form_Load
+             */
             this.UserNameLbl.Text = userName;
             var startPoint = new Point(this.GameBoardPnl.Width/2, 0);
             this._game = new Game(this.GameBoardPnl.Width, this.GameBoardPnl.Height, Settings.RoadWidth, Settings.RoadHeight, startPoint);
@@ -66,10 +75,15 @@ namespace ZigZag.DesktopUI
             this.countPictureBox.Hide();
             this._statistic = new GameStatistic();
             this._ballImage = (Image)new Bitmap(Properties.Resources.ball_skin, new Size(Settings.BallWidth, Settings.BallHeight));
+            /*
+             * ВВ: іниціалізацію елементів форми слід виконувати в обробнику події Form_Load
+             */
             this.SoundModePcb.Image = SoundManager.SoundConfig == SoundMode.On ? 
                 Properties.Resources.sound_on : Properties.Resources.sound_off;
 
             this._dc = this.GameBoardPnl.CreateGraphics();
+
+            Console.WriteLine("MainForm - Thread - {0} - {1}", System.Threading.Thread.CurrentThread.Name, System.Threading.Thread.CurrentThread.ManagedThreadId);
         }
 
         #endregion
@@ -218,8 +232,12 @@ namespace ZigZag.DesktopUI
                 Console.WriteLine("YRECT = {0}", _constYRect);
 #endif
             }
-            lock (this._sync)
+            /*
+             * ВВ: наскільки я зрозумів, паралельні потоки не використовуються, тому не потрібна синхронізація
+             */
+            //lock (this._sync)
             {
+                Console.WriteLine("MapRedrawEventHandler - Thread - {0} - {1}", System.Threading.Thread.CurrentThread.Name, System.Threading.Thread.CurrentThread.ManagedThreadId);
                 if (this._isMapRedraw)
                 {
                     var startIndex = this._mapPosition - Settings.BallHeight;
@@ -338,8 +356,14 @@ namespace ZigZag.DesktopUI
 
         private void DrawBall(Graphics dc, int pos, int offset = 0)
         {
-            lock (_sync)
+            /*
+             * ВВ: наскільки я зрозумів, паралельні потоки не використовуються, тому не потрібна синхронізація
+             */
+            //lock (_sync)
             {
+#if DEBUG
+                Console.WriteLine("DrawBall - Thread - {0} - {1}", System.Threading.Thread.CurrentThread.Name, System.Threading.Thread.CurrentThread.ManagedThreadId);
+#endif
                 if (IsGameOver(pos))
                 {
                     this._mapRedrawTimer.Stop();

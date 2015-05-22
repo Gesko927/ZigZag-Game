@@ -18,6 +18,9 @@ namespace ZigZag.DesktopUI.GameForms
         {
             InitializeComponent();
             this._backTag = PicturesTags.Light;
+            /*
+             * ВВ: іниціалізацію елементів форми слід виконувати в обробнику події Form_Load
+             */
             this.ScoreValueLbl.Text = score.ToString();
         }
 

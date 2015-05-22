@@ -35,7 +35,7 @@
     <ApplicationIcon>zigzag_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>desktopKeys.pfx</AssemblyOriginatorKeyFile>
@@ -52,9 +52,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="ZigZag.GameEngine">
-      <HintPath>..\ZigZag.GameEngine\bin\Release\ZigZag.GameEngine.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameForms\ControlInstructuinForm.cs">
@@ -219,6 +216,12 @@
     <None Include="Resources\keycontrol_img.png" />
     <None Include="Resources\controlkey_space.png" />
     <None Include="Resources\typing_un.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZigZag.GameEngine\ZigZag.GameEngine.csproj">
+      <Project>{1f394bee-a87a-43bf-9bd1-143ebf0c83cf}</Project>
+      <Name>ZigZag.GameEngine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

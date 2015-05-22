@@ -8,6 +8,10 @@ namespace ZigZag.DesktopUI.GameForms
     {
         #region Public Properties
 
+        /*
+         * ВВ: властивість можна реалізувати так, щоб в get і set відбувався прямий доступ до InputUserNameTxBx.Text
+         * 
+         */
         public string UserName { get; set; }
 
         #endregion
@@ -17,6 +21,9 @@ namespace ZigZag.DesktopUI.GameForms
         public EditUserNameForm()
         {
             InitializeComponent();
+            /*
+             * ВВ: іниціалізацію елементів форми слід виконувати в обробнику події Form_Load
+             */
             this.InputUserNameTxBx.Select(InputUserNameTxBx.Text.Length, 0);
         }
 

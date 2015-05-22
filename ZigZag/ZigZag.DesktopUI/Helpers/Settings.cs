@@ -3,10 +3,16 @@ using ZigZag.GameEngine;
 
 namespace ZigZag.DesktopUI.Helpers
 {
+    /*
+     * VV: добре. що налаштування зібрані в одному файлі, але цей клас не варто робити статичним
+     */
     public static class Settings
     {
         #region Public Fields
 
+        /*
+         * VV: поля не повинні бути публічничи
+         */
         public static readonly int MapWidth;
         public static readonly int MapHeight;
         public static readonly int RoadWidth;

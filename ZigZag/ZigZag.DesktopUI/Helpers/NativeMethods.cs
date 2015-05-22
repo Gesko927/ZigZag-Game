@@ -2,6 +2,9 @@
 
 namespace ZigZag.DesktopUI.Helpers
 {
+    /*
+     * ВВ: цей клас можна позначити #if DEBUG, оскільки він потрібний тільки для відлагодження    
+     */
     internal static class NativeMethods
     {
         // http://msdn.microsoft.com/en-us/library/ms681944(VS.85).aspx

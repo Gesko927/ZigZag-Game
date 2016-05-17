@@ -54,7 +54,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="ZigZag.GameEngine">
-      <HintPath>..\ZigZag.GameEngine\bin\Release\ZigZag.GameEngine.dll</HintPath>
+      <HintPath>..\ZigZag.GameEngine\bin\Debug\ZigZag.GameEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
